@@ -1,6 +1,6 @@
 # 🎮 Gabarita Mente
 
-**`Jogo Educacional Interativo`**
+**Jogo Educacional Interativo**
 
 O **Gabarita Mente** é uma plataforma interativa que oferece aos estudantes uma maneira mais leve e envolvente de se prepararem para vestibulares e concursos. Focando na usabilidade e simplicidade, o sistema busca não apenas melhorar o desempenho dos usuários, mas também despertar o interesse contínuo pelo aprendizado.
 
@@ -8,14 +8,14 @@ O **Gabarita Mente** é uma plataforma interativa que oferece aos estudantes uma
 
 ### 📚 Funcionalidades Principais
 
-- ✅ **Cadastro de Usuários**: Registro com nome, e-mail e senha.
-- ✅ **Login via Microsoft**: Autenticação rápida e segura.
-- ✅ **Página Inicial**: Acesso ao quiz, informações gerais e visão de progresso.
-- ✅ **Quiz Geral de Questões**: Testes de múltipla escolha com temas variados.
-- ✅ **Correção Automática**: As respostas são avaliadas ao final do quiz.
-- ✅ **Relatório de Acertos**: Exibição do total de acertos ao término.
-- ✅ **Contagem de Tempo**: Cada quiz tem um tempo-limite para ser concluído.
-- ✅ **Sobre Nós**: Informações sobre a equipe por trás do projeto.
+✅ **Cadastro de Usuários**: Registro com nome, e-mail e senha.
+✅ **Login via Microsoft**: Autenticação rápida e segura.
+✅ **Página Inicial**: Acesso ao quiz, informações gerais e visão de progresso.
+✅ **Quiz Geral de Questões**: Testes de múltipla escolha com temas variados.
+✅ **Correção Automática**: As respostas são avaliadas ao final do quiz.
+✅ **Relatório de Acertos**: Exibição do total de acertos ao término.
+✅ **Contagem de Tempo**: Cada quiz tem um tempo-limite para ser concluído.
+✅ **Sobre Nós**: Informações sobre a equipe por trás do projeto.
 
 ---
 
@@ -24,45 +24,13 @@ O **Gabarita Mente** é uma plataforma interativa que oferece aos estudantes uma
 Conheça nossa equipe responsável pelo desenvolvimento do **Gabarita Mente**! 💡
 
 
-<div style="display: flex;flex-direction: row;">
-  <p style="display: flex;flex-direction: row; justify-content: center; align-items: center; gap: 20px;">
-    <a href="https://github.com/saraaa123" target="_blank">
-      <img loading="lazy" src="https://github.com/saraaa123.png" width="70px" style="border-radius: 50%" alt="Sara"/>
-      <br/>
-      <strong>Sara Cotrim</strong>
-    </a>
-    <a href="https://github.com/PolyKaory" target="_blank">
-      <img  loading="lazy" src="https://github.com/PolyKaory.png" width="70px" style="border-radius: 50%" alt="Poly Kaory"/>
-      <br/>
-      <strong>Poly Kaory</strong>
-    </a>
-    <a href="https://github.com/dudamunaro" target="_blank">
-      <img  loading="lazy" src="https://github.com/dudamunaro.png" width="70px" style="border-radius: 50%" alt="Duda Munaro"/>
-      <br/>
-      <strong>Duda Munaro</strong>
-    </a>
-    <a href="https://github.com/edu18sp" target="_blank">
-      <img  loading="lazy" src="https://github.com/edu18sp.png" width="70px" style="border-radius: 50%" alt="Eduardo"/>
-      <br/>
-      <strong>Eduardo</strong>
-    </a>
-    <a href="https://github.com/ArielThiago" target="_blank">
-      <img  loading="lazy" src="https://github.com/ArielThiago.png" width="70px" style="border-radius: 50%" alt="Ariel Thiago"/>
-      <br/>
-      <strong>Ariel Thiago</strong>
-    </a>
-    <a href="https://github.com/GiovanaQMaciel" target="_blank">
-      <img  loading="lazy" src="https://github.com/GiovanaQMaciel.png" width="70px" style="border-radius: 50%" alt="Giovana Maciel"/>
-      <br/>
-      <strong>Giovana Maciel</strong>
-    </a>
-    <a href="https://github.com/balangazanuto" target="_blank">
-      <img  loading="lazy" src="https://github.com/balangazanuto.png" width="70px" style="border-radius: 50%" alt="Balanga Zanuto"/>
-      <br/>
-      <strong>Balanga Zanuto</strong>
-    </a>
-  </p>
-</div>
+<div  style="display: flex; justify-content: center;">
+  <section style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
+
+| [![Sara](https://github.com/saraaa123.png?size=70)](https://github.com/saraaa123) | [![Poly](https://github.com/PolyKaory.png?size=70)](https://github.com/PolyKaory) | [![Duda](https://github.com/dudamunaro.png?size=70)](https://github.com/dudamunaro) | [![Eduardo](https://github.com/edu18sp.png?size=70)](https://github.com/edu18sp) | [![Ariel](https://github.com/ArielThiago.png?size=70)](https://github.com/ArielThiago) | [![Giovana](https://github.com/GiovanaQMaciel.png?size=70)](https://github.com/GiovanaQMaciel) | [![Balanga](https://github.com/balangazanuto.png?size=70)](https://github.com/balangazanuto) |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Sara Cotrim** | **Poly Kaory** | **Duda Munaro** | **Eduardo** | **Ariel Thiago** | **Giovana Maciel** | **Balanga Zanuto** |
+
 
 ---
 
