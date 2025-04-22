@@ -23,6 +23,7 @@ O **Gabarita Mente** é uma plataforma interativa que oferece aos estudantes uma
 
 Conheça nossa equipe responsável pelo desenvolvimento do **Gabarita Mente**! 💡
 
+
 <div style="display: flex">
   <p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
     <a href="https://github.com/saraaa123" target="_blank">
