@@ -8,7 +8,7 @@ function Quiz() {
 
   useEffect(() => {
 
-    axios.get("http://localhost:5000/api/perguntas")
+    axios.get("http://localhost:3000/api/perguntas")
 
       .then(response => setPerguntas(response.data))
 
