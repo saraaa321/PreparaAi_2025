@@ -27,7 +27,7 @@ Conheça nossa equipe responsável pelo desenvolvimento do **Gabarita Mente**! �
 <div  style="display: flex; justify-content: center;">
   <section style="display: flex; justify-content: center; align-items: center; gap: 20px; white-space: nowrap;">
 
-| [![Sara](https://github.com/saraaa123.png?size=70)](https://github.com/saraaa123) | [![Poly](https://github.com/PolyKaory.png?size=70)](https://github.com/PolyKaory) | [![Duda](https://github.com/dudamunaro.png?size=70)](https://github.com/dudamunaro) | [![Eduardo](https://github.com/edu18sp.png?size=70)](https://github.com/edu18sp) | [![Ariel](https://github.com/ArielThiago.png?size=70)](https://github.com/ArielThiago) | [![Giovana](https://github.com/GiovanaQMaciel.png?size=70)](https://github.com/GiovanaQMaciel) | [![Balanga](https://github.com/balangazanuto.png?size=70)](https://github.com/balangazanuto) |
+| [![Sara](https://github.com/saraaa321.png?size=70)](https://github.com/saraaa123) | [![Poly](https://github.com/PolyKaory.png?size=70)](https://github.com/PolyKaory) | [![Duda](https://github.com/dudamunaro.png?size=70)](https://github.com/dudamunaro) | [![Eduardo](https://github.com/edu18sp.png?size=70)](https://github.com/edu18sp) | [![Ariel](https://github.com/ArielThiago.png?size=70)](https://github.com/ArielThiago) | [![Giovana](https://github.com/GiovanaQMaciel.png?size=70)](https://github.com/GiovanaQMaciel) | [![Balanga](https://github.com/balangazanuto.png?size=70)](https://github.com/balangazanuto) |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | **Sara Cotrim** | **Poly Kaory** | **Duda Munaro** | **Eduardo** | **Ariel Thiago** | **Giovana Maciel** | **Balanga Zanuto** |
 
