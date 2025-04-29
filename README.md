@@ -1,4 +1,4 @@
-<!-- # 🎮 Gabarita Mente
+# 🎮 Gabarita Mente
 
 **Jogo Educacional Interativo**
 
@@ -8,16 +8,16 @@ O **Gabarita Mente** é uma plataforma interativa que oferece aos estudantes uma
 
 ### 📚 Funcionalidades Principais
 
-<!-- ✅ **Cadastro de Usuários**: Registro com nome, e-mail e senha. -->
-<!-- ✅ **Login via Microsoft**: Autenticação rápida e segura. -->
-<!-- ✅ **Página Inicial**: Acesso ao quiz, informações gerais e visão de progresso. -->
-<!-- ✅ **Quiz Geral de Questões**: Testes de múltipla escolha com temas variados. -->
-<!-- ✅ **Correção Automática**: As respostas são avaliadas ao final do quiz. -->
-<!-- ✅ **Relatório de Acertos**: Exibição do total de acertos ao término. -->
-<!-- ✅ **Contagem de Tempo**: Cada quiz tem um tempo-limite para ser concluído. -->
-<!-- ✅ **Sobre Nós**: Informações sobre a equipe por trás do projeto. -->
+✅ **Cadastro de Usuários**: Registro com nome, e-mail e senha.
+✅ **Login via Microsoft**: Autenticação rápida e segura.
+✅ **Página Inicial**: Acesso ao quiz, informações gerais e visão de progresso.
+✅ **Quiz Geral de Questões**: Testes de múltipla escolha com temas variados.
+✅ **Correção Automática**: As respostas são avaliadas ao final do quiz.
+✅ **Relatório de Acertos**: Exibição do total de acertos ao término.
+✅ **Contagem de Tempo**: Cada quiz tem um tempo-limite para ser concluído.
+✅ **Sobre Nós**: Informações sobre a equipe por trás do projeto.
 
-<!-- ---
+---
 
 ### 👨‍💻 Desenvolvedores
 
@@ -52,7 +52,7 @@ Conheça nossa equipe responsável pelo desenvolvimento do **Gabarita Mente**! �
 
 ```bash
 git clone https://github.com/SeuUsuario/GabaritaMente.git
-cd GabaritaMente --> -->
+cd GabaritaMente
 
 
 
