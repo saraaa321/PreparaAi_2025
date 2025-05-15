@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white; /* Cor de fundo clara e neutra */
+    color: #333; /* Cor padrão de texto */
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+.ranking-container {
+    font-family: sans-serif;
+  }
+  
+  .ranking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002b45;
+    padding: 10px 20px;
+  }
+  
+  .ranking-logo {
+    height: 50px;
+  }
+  
+  .ranking-button {
+    background-color: #2d89ef;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .ranking-title {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .ranking-title img {
+    height: 80px;
+  }
+  
+  .ranking-table-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+  }
+  
+  .ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .ranking-table th {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    background-color: white;
+    color: #000;
+  }
+  
+  .linha-par {
+    background-color: #002b45;
+    height: 50px;
+  }
+  
+  .linha-impar {
+    background-color: #2d89ef;
+    height: 50px;
+  }
+  

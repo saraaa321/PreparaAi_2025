@@ -1,0 +1,102 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Topo com logo e botão */
+.topo {
+  background-color: #003B64;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.btn-voltar {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 24px;      /* Aumenta a área do botão */
+  font-size: 18px;         /* Aumenta o texto */
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 100px;        /* Garante um tamanho mínimo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.btn-voltar:hover {
+  transform: scale(1.05); /* Efeito leve ao passar o mouse */
+}
+
+/* Título (imagem) */
+.titulo-img-area {
+  margin: 30px 0 20px;
+}
+
+.titulo-img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Bloco Geral */
+.box-geral {
+  background-color: #FFC727;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 700px;
+}
+
+.box-geral-titulo {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.imagem {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+/* Botão Iniciar */
+.area-iniciar {
+  margin-top: 20px;
+}
+
+.btn-iniciar {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}

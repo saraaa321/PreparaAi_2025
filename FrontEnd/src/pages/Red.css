@@ -1,0 +1,95 @@
+.pagina {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    background: white;
+    color: #000;
+    padding-bottom: 2rem;
+  }
+  
+  .topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003049;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .botao-sair {
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .titulo {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    font-size: 24px;
+  }
+  
+  .grade-temas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+  
+  .card-tema {
+    background-color: #003049;
+    color: white;
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .imagem-tema {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .texto-tema {
+    margin-top: 1rem;
+    font-size: 16px;
+  }
+  
+  .banca {
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  .botao-acessar {
+    background-color: white;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+  
+  .conteudo-apoio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+  
+  .caixa-texto, .proposta {
+    background-color: #003049;
+    color: white;
+    border-radius: 16px;
+    padding: 1rem;
+  }
+  
+  .tirinha {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
