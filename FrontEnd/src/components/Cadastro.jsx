@@ -105,12 +105,18 @@ const Cadastro = ({ setUser }) => {
 
             // Criar documento do usuário no Firestore
             const userRef = doc(db, "usuarios", user.uid);
+            const hojeStr = new Date().toISOString().split("T")[0];
+
             await setDoc(userRef, {
-                nome: nome,   // Garantir que o nome do usuário seja salvo corretamente
+                nome: nome,
                 email: email,
-                pontuacao: 0, // Pontuação inicial
-                ranking: 0    // Campo extra para rankeamento (se necessário)
+                pontuacao: 0,
+                ranking: 0,
+                ofensiva: 1,
+                semana: 0,
+                ultimaAbertura: hojeStr,
             });
+
 
             setUser(user);
             alert("Usuário cadastrado com sucesso!");

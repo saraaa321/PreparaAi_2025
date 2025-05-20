@@ -84,19 +84,20 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { auth } from "../../firebaseConfig";
-import { signOut, onAuthStateChanged } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
+import { signOut } from "firebase/auth";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
 import "./css/PagInicial.css";
 import arielImg from "../assets/ariel.png";
 import logo2Img from "../assets/logo2.png";
-import flameImg from "../assets/flame.png";
 import saraImg from "../assets/sara.png";
 
 function PagInicial({ user }) {
   const navigate = useNavigate();
   const [nome, setNome] = useState('');
+  const [ofensiva, setOfensiva] = useState(0);
+  const [semana, setSemana] = useState(0); // estado para semanas
 
   useEffect(() => {
     if (!user) return;
@@ -109,7 +110,6 @@ function PagInicial({ user }) {
         if (userSnap.exists()) {
           setNome(userSnap.data().nome);
         } else {
-          // fallback para o displayName do auth
           setNome(user.displayName || 'Usuário');
         }
       } catch (error) {
@@ -121,8 +121,60 @@ function PagInicial({ user }) {
     buscarNome();
   }, [user]);
 
-  //   return () => unsubscribe();
-  // }, []);
+  useEffect(() => {
+    if (!user) return;
+
+    const atualizarOfensiva = async () => {
+      const userRef = doc(db, "usuarios", user.uid);
+      const userSnap = await getDoc(userRef);
+
+      if (userSnap.exists()) {
+        const data = userSnap.data();
+
+        setNome(data.nome || user.displayName || 'Usuário');
+
+        const hoje = new Date();
+        const hojeStr = hoje.toISOString().split("T")[0]; // YYYY-MM-DD
+        const ultimaAberturaStr = data.ultimaAbertura;
+        const ofensivaAtual = data.ofensiva || 0;
+        const semanaAtual = data.semana || 0;
+
+        const ontem = new Date();
+        ontem.setDate(ontem.getDate() - 1);
+        const ontemStr = ontem.toISOString().split("T")[0];
+
+        let novaOfensiva = ofensivaAtual;
+        let novaSemana = semanaAtual;
+
+        if (!ultimaAberturaStr || ultimaAberturaStr !== hojeStr) {
+          if (ultimaAberturaStr === ontemStr) {
+            novaOfensiva += 1;
+          } else {
+            novaOfensiva = 1; // zerou o streak de dias
+            novaSemana = 1;   // reset na semana também
+          }
+
+          // Se passou de 7 dias consecutivos, conta como 1 semana e reseta dias
+          if (novaOfensiva > 7) {
+            novaOfensiva = 1;
+            novaSemana += 1;
+          }
+
+          // Atualiza Firestore
+          await updateDoc(userRef, {
+            ultimaAbertura: hojeStr,
+            ofensiva: novaOfensiva,
+            semana: novaSemana,
+          });
+        }
+
+        setOfensiva(novaOfensiva);
+        setSemana(novaSemana);
+      }
+    };
+
+    atualizarOfensiva();
+  }, [user]);
 
   const handleLogout = async () => {
     try {
@@ -135,6 +187,7 @@ function PagInicial({ user }) {
 
   const handleQuiz = () => navigate('/PgQuiz');
   const handleRanking = () => navigate('/Ranking');
+  const handleRedacao = () => navigate('/Redacao');
   const handleSobreNos = () => navigate('/SobreNos');
 
   return (
@@ -154,10 +207,16 @@ function PagInicial({ user }) {
           <div className="welcome-text">
             <h1>Seja Bem-Vindo</h1>
             <p>Transforme sua dedicação em aprovação no ENEM!</p>
-            <p className="sub">Sua Ofensiva</p>
-            <div className="flames">
-              {[...Array(7)].map((_, i) => (
-                <img key={i} src={flameImg} alt="Flama" />
+            <p className="sub">Ofensiva: {ofensiva} dia(s)</p>
+            <div className="ofensiva-bar">
+              {[...Array(ofensiva)].map((_, i) => (
+                <div key={i} className="ofensiva-point" />
+              ))}
+            </div>
+            <p className="sub">Semanas completas: {semana}</p>
+            <div className="ofensiva-bar">
+              {[...Array(semana)].map((_, i) => (
+                <div key={i} className="ofensiva-point" />
               ))}
             </div>
           </div>
@@ -168,7 +227,7 @@ function PagInicial({ user }) {
       <section className="cards-section">
         <div className="card yellow" onClick={handleRanking}>Ranking</div>
         <button className="card green" onClick={handleQuiz}>Questionários</button>
-        <div className="card red">Temas - Redação</div>
+        <div className="card red" onClick={handleRedacao}>Temas - Redação</div>
       </section>
     </div>
   );

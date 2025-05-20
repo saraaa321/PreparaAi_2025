@@ -71,6 +71,7 @@
   .linha-par {
     background-color: #002b45;
     height: 50px;
+    color: white;
   }
   
   .linha-impar {

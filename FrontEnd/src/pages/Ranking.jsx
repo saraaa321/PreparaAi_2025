@@ -118,14 +118,14 @@ function Ranking() {
 
       <div className="ranking-table-container">
         <table className="ranking-table">
-          <head>
+          <thead>
             <tr>
               <th>CLASSIFICAÇÃO</th>
               <th>NOME</th>
               <th>PONTUAÇÃO</th>
             </tr>
-          </head>
-          <body>
+          </thead>
+          <tbody>
             {usuarios.length === 0 ? (
               <tr>
                 <td colSpan="3">Nenhum usuário encontrado.</td>
@@ -139,7 +139,7 @@ function Ranking() {
                 </tr>
               ))
             )}
-          </body>
+          </tbody>
 
         </table>
       </div>

@@ -144,3 +144,20 @@
     align-self: center;
   }
   
+
+  .ofensiva-bar {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.ofensiva-point {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/flame.png'); /* ajuste o caminho se precisar */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  
+}

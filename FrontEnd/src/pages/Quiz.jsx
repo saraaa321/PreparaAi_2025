@@ -56,7 +56,7 @@ const Quiz = () => {
   const handleRespostaClick = (index) => {
     if (respostaSelecionada === null) {
       setRespostaSelecionada(index);
-      
+
       // Salvar a resposta atual no array de respostas
       setRespostasUsuario((prev) => [
         ...prev,
@@ -68,7 +68,7 @@ const Quiz = () => {
       ]);
     }
   };
-  
+
 
   const proximaPergunta = async () => {
     if (indicePergunta < perguntas.length - 1) {
@@ -76,38 +76,38 @@ const Quiz = () => {
       setRespostaSelecionada(null);
     } else {
       const acertos = respostasUsuario.filter((r) => r.correta).length;
-const user = auth.currentUser;
+      const user = auth.currentUser;
 
-if (user) {
-  const userRef = doc(db, "usuarios", user.uid);
+      if (user) {
+        const userRef = doc(db, "usuarios", user.uid);
 
-  try {
-    const userDoc = await getDoc(userRef);
+        try {
+          const userDoc = await getDoc(userRef);
 
-    if (userDoc.exists()) {
-      const pontuacaoAnterior = userDoc.data().pontuacao || 0;
-      const novaPontuacao = pontuacaoAnterior + acertos;
+          if (userDoc.exists()) {
+            const pontuacaoAnterior = userDoc.data().pontuacao || 0;
+            const novaPontuacao = pontuacaoAnterior + acertos;
 
-      await updateDoc(userRef, { pontuacao: novaPontuacao });
+            await updateDoc(userRef, { pontuacao: novaPontuacao });
 
-      alert(`Você concluiu o quiz! Acertos: ${acertos}. Sua nova pontuação total é: ${novaPontuacao}`);
-      navigate('/ranking');
+            alert(`Você concluiu o quiz! Acertos: ${acertos}. Sua nova pontuação total é: ${novaPontuacao}`);
+            navigate('/ranking');
 
-    } else {
-      console.error("Documento do usuário não encontrado.");
-      alert("Erro ao atualizar pontuação: usuário não encontrado.");
-    }
-  } catch (error) {
-    console.error("Erro ao atualizar pontuação:", error);
-    alert("Erro ao atualizar pontuação.");
-  }
-} else {
-  alert("Usuário não autenticado.");
-}
+          } else {
+            console.error("Documento do usuário não encontrado.");
+            alert("Erro ao atualizar pontuação: usuário não encontrado.");
+          }
+        } catch (error) {
+          console.error("Erro ao atualizar pontuação:", error);
+          alert("Erro ao atualizar pontuação.");
+        }
+      } else {
+        alert("Usuário não autenticado.");
+      }
 
     }
   };
-  
+
 
   // Função para mostrar o modal de confirmação
   const sairQuiz = () => {
@@ -132,7 +132,7 @@ if (user) {
 
 
 
-  
+
 
   return (
     <div className="quiz-container">
@@ -151,13 +151,16 @@ if (user) {
           {perguntaAtual.opcoes.map((opcao, index) => (
             <button
               key={index}
-              className={`quiz-opcao ${
-                respostaSelecionada === index
-                  ? opcao.correta
-                    ? "correta"
-                    : "errada"
+              className={`quiz-opcao ${respostaSelecionada !== null
+                  ? index === respostaSelecionada
+                    ? opcao.correta
+                      ? "correta"
+                      : "errada"
+                    : opcao.correta
+                      ? "correta"
+                      : ""
                   : ""
-              }`}
+                }`}
               onClick={() => handleRespostaClick(index)}
               disabled={respostaSelecionada !== null}
             >
