@@ -3,9 +3,11 @@ import "./css/Quiz.css";
 import axios from "axios";
 import Logo from "../assets/logo.png";
 import { db } from "../../firebaseConfig";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc, collection, addDoc } from "firebase/firestore";
 import { auth } from "../../firebaseConfig";
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 
 
 
@@ -29,16 +31,27 @@ const Quiz = () => {
   const [modalVisivel, setModalVisivel] = useState(false);
   const [respostasUsuario, setRespostasUsuario] = useState([]);
   const navigate = useNavigate();
+  const { categoria } = useParams(); // pegamos a categoria da URL
+
+
+
 
 
   useEffect(() => {
     axios.get("http://localhost:3000/api/perguntas")
       .then((response) => {
-        const perguntasFormatadas = response.data.map((p) => {
-          const opcoesFormatadas = p.opcoes.map((opcao) => ({
-            texto: opcao,
-            correta: opcao === p.correta,
+        let perguntasFiltradas = response.data;
+
+        if (categoria) {
+          perguntasFiltradas = perguntasFiltradas.filter(p => p.categoria === categoria);
+        }
+
+        const perguntasFormatadas = perguntasFiltradas.map((p) => {
+          const opcoesFormatadas = p.respostas.map((resposta) => ({
+            texto: resposta,
+            respostaCorreta: resposta === p.respostaCorreta,
           }));
+
           return {
             pergunta: p.pergunta,
             opcoes: embaralharArray(opcoesFormatadas),
@@ -50,32 +63,14 @@ const Quiz = () => {
         setPerguntas(perguntasEmbaralhadas);
       })
       .catch((error) => console.error("Erro ao buscar perguntas", error));
-  }, []);
-
-
-  const handleRespostaClick = (index) => {
-    if (respostaSelecionada === null) {
-      setRespostaSelecionada(index);
-
-      // Salvar a resposta atual no array de respostas
-      setRespostasUsuario((prev) => [
-        ...prev,
-        {
-          perguntaIndex: indicePergunta,
-          respostaIndex: index,
-          correta: perguntas[indicePergunta].opcoes[index].correta,
-        },
-      ]);
-    }
-  };
-
+  }, [categoria]);
 
   const proximaPergunta = async () => {
     if (indicePergunta < perguntas.length - 1) {
       setIndicePergunta(indicePergunta + 1);
       setRespostaSelecionada(null);
     } else {
-      const acertos = respostasUsuario.filter((r) => r.correta).length;
+      const acertos = respostasUsuario.filter((r) => r.respostaCorreta).length;
       const user = auth.currentUser;
 
       if (user) {
@@ -89,6 +84,12 @@ const Quiz = () => {
             const novaPontuacao = pontuacaoAnterior + acertos;
 
             await updateDoc(userRef, { pontuacao: novaPontuacao });
+            console.log("Pontuação atualizada com sucesso!");
+            await addDoc(collection(db, 'ranking'), {
+              nome: user.displayName || "Usuário Anônimo",
+              pontuacao: acertos,
+              categoria: categoria || "geral",
+            });
 
             alert(`Você concluiu o quiz! Acertos: ${acertos}. Sua nova pontuação total é: ${novaPontuacao}`);
             navigate('/ranking');
@@ -107,6 +108,41 @@ const Quiz = () => {
 
     }
   };
+
+
+
+  const handleRespostaClick = (index) => {
+    if (respostaSelecionada === null) {
+      setRespostaSelecionada(index);
+
+      // Salvar a resposta atual no array de respostas
+      setRespostasUsuario(prev => {
+        const jaRespondeu = prev.find(r => r.perguntaIndex === indicePergunta);
+        if (jaRespondeu) {
+          return prev.map(r =>
+            r.perguntaIndex === indicePergunta
+              ? {
+                perguntaIndex: indicePergunta,
+                respostaIndex: index,
+                respostaCorreta: perguntas[indicePergunta].opcoes[index].respostaCorreta,
+              }
+              : r
+          );
+        } else {
+          return [
+            ...prev,
+            {
+              perguntaIndex: indicePergunta,
+              respostaIndex: index,
+              respostaCorreta: perguntas[indicePergunta].opcoes[index].respostaCorreta,
+            },
+          ];
+        }
+      });
+    };
+
+  };
+
 
 
   // Função para mostrar o modal de confirmação
@@ -148,23 +184,23 @@ const Quiz = () => {
         <h2 className="quiz-pergunta">{`Questão ${indicePergunta + 1}`}</h2>
         <p className="quiz-enunciado">{perguntaAtual.pergunta}</p>
         <div className="quiz-opcoes">
-          {perguntaAtual.opcoes.map((opcao, index) => (
+          {perguntaAtual.opcoes.map((respostas, index) => (
             <button
               key={index}
-              className={`quiz-opcao ${respostaSelecionada !== null
-                  ? index === respostaSelecionada
-                    ? opcao.correta
-                      ? "correta"
-                      : "errada"
-                    : opcao.correta
-                      ? "correta"
-                      : ""
-                  : ""
+              className={`quiz-respostas ${respostaSelecionada !== null
+                ? index === respostaSelecionada
+                  ? respostas.respostaCorreta
+                    ? "respostaCorreta"
+                    : "errada"
+                  : respostas.respostaCorreta
+                    ? "respostaCorreta"
+                    : ""
+                : ""
                 }`}
               onClick={() => handleRespostaClick(index)}
               disabled={respostaSelecionada !== null}
             >
-              {opcao.texto}
+              {respostas.texto}
             </button>
           ))}
         </div>
@@ -198,6 +234,8 @@ const Quiz = () => {
       )}
     </div>
   );
+
 };
 
 export default Quiz;
+

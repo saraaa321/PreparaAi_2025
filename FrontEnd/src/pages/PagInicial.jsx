@@ -187,8 +187,9 @@ function PagInicial({ user }) {
 
   const handleQuiz = () => navigate('/PgQuiz');
   const handleRanking = () => navigate('/Ranking');
-  const handleRedacao = () => navigate('/Redacao');
+  const handleRedacao = () => navigate('/Temas');
   const handleSobreNos = () => navigate('/SobreNos');
+   const handleResumos = () => navigate('/Resumos');
 
   return (
     <div className="App">
@@ -228,6 +229,7 @@ function PagInicial({ user }) {
         <div className="card yellow" onClick={handleRanking}>Ranking</div>
         <button className="card green" onClick={handleQuiz}>Questionários</button>
         <div className="card red" onClick={handleRedacao}>Temas - Redação</div>
+        <div className="card blue" onClick={handleResumos}>Resumos</div>
       </section>
     </div>
   );

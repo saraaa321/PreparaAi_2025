@@ -1,5 +1,5 @@
 import React from 'react';
-import './Red.css';
+import './css/Red.css';
 import { useNavigate } from 'react-router-dom';
 
 const Temas = () => {

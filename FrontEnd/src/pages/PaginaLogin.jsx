@@ -135,10 +135,11 @@ const PaginaLogin = ({ setUser }) => {
           <img src={Logo} alt="Logo" id="imagemLogo" />
         </div>
       </header>
-      <div className="image-section">
-          <img src={ImagemPoly} alt="Capa" className="main-image" />
-      </div>
+      
       <main>
+        <div className="image-section">
+          <img src={ImagemPoly} alt="Capa" className="main-image" />
+       </div>
         <div className="form-section">
           <img src={Login} alt="Login" className="logo" />
           <button
@@ -162,7 +163,12 @@ const PaginaLogin = ({ setUser }) => {
           </button>
         </div>
       </main>
+      <footer className="rodape">
+  <p>© 2025 Minha Plataforma</p>
+</footer>
+
     </div>
+    
   );
 };
 

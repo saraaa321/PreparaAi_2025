@@ -6,6 +6,7 @@ import PgQuiz from './pages/PgQuiz';
 import Quiz from './pages/Quiz'; 
 import Sobre from './pages/SobreNos';
 import Ranking from './pages/Ranking'; // Importando o componente de Ranking
+import Temas from './pages/Temas';
 
 const RouterApp = () => {
   const [user, setUser] = useState(null);
@@ -15,9 +16,11 @@ const RouterApp = () => {
       <Route path="/" element={<PaginaLogin setUser={setUser} />} />
       <Route path="/PagInicial" element={<PagInicial user={user} />} />
       <Route path="/PgQuiz" element={<PgQuiz user={user}/>} />
-      <Route path="/Quiz" element={<Quiz user={user}/>} />
+      <Route path="/Quiz/geral" element={<Quiz user={user}/>} />
       <Route path="/SobreNos" element={<Sobre user={user}/>} />
       <Route path="/Ranking" element={<Ranking user={user}/>} /> 
+      <Route path="/Temas" element={<Temas user={user}/>} />
+      <Route path='quiz/:categoria' element={<Quiz user={user}/>} />
       {/* Adicione outras rotas conforme necessário */}
       
       

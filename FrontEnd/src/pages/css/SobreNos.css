@@ -1,4 +1,4 @@
-/* Geral */
+/* Geral
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -6,14 +6,14 @@ body {
     color: #0B1E3D;
   }
   
-  /* Container principal */
+  Container principal 
   .SobreNos {
-    display: flex;
+     display: flex; 
     flex-direction: column;
     min-height: 100vh;
   }
   
-  /* Topo */
+  Topo 
   .top-bar {
     background-color: #0B1E3D;
     display: flex;
@@ -55,7 +55,7 @@ body {
     background-color: #005FCC;
   }
   
-  /* Conteúdo principal */
+  /* Conteúdo principal 
   .main-content {
     padding: 50px 30px;
     max-width: 1100px;
@@ -84,7 +84,7 @@ body {
     margin-bottom: 40px;
   }
   
-  /* Cards dos desenvolvedores */
+  /* Cards dos desenvolvedores 
   .devs-container {
     display: flex;
     flex-wrap: wrap;
@@ -141,4 +141,158 @@ body {
     width: 50%;
     align-items: center;
   }
-  
+   */
+
+
+/* css/SobreNos.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #0B1E3D;
+  overflow-y: auto;
+}
+
+/* Container principal */
+.SobreNos {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Topo fixo */
+.top-bar {
+  background-color: #0B1E3D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 50px;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background-color: white;
+  color: #0B1E3D;
+  border: none;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.btn.sair {
+  background-color: #1e40af;
+  color: white;
+}
+
+.btn.sair:hover {
+  background-color: #1d4ed8;
+}
+
+/* Conteúdo principal */
+.main-content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sobrenos {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+.p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título dos devs */
+.devsIMG {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Containers de cards */
+.devs-container,
+.devs-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card individual */
+.devs {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.devs:hover {
+  transform: translateY(-5px);
+}
+
+.devs-img,
+.devs-imgA {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.tit {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  text-align: justify;
+  color: #333;
+}
