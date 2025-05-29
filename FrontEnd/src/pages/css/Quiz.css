@@ -191,3 +191,31 @@ html {
     background-color: #d62828;
   }
   
+
+  @media screen and (max-width: 768px) {
+    .quiz-opcoes {
+      grid-template-columns: 1fr;
+    }
+
+    .menu{
+        margin: 1px;
+    }
+
+    #imagemLogo {
+    margin-left: -10px;
+    height: 40px;
+    width: auto;
+}
+
+.sair-btn {
+   
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: -2%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+    
+  }

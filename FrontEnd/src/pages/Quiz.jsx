@@ -447,7 +447,7 @@ const Quiz = () => {
     <div className="quiz-container">
       <header className="cabeçalho">
         <div className="menu">
-          <img src={Logo} alt="Logo" id="imagemLogo" />
+          <img src={Logo} alt="Logo" id="imagemLogo" className="logo" />
         </div>
         <h2 className="Materia">{perguntaAtual.categoria}</h2>
         <button className="sair-btn" onClick={sairQuiz}>Sair</button>

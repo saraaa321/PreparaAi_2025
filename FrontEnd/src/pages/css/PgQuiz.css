@@ -137,3 +137,25 @@ body, html, #root {
   background-color: #0056b3;
   transform: scale(1.20);
 }
+
+
+@media screen and (max-width: 768px) {
+  .botoes-categorias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; 
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+  .categoria-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 20px ;
+  font-size: 16px;
+  margin: 9px;  
+
+}
+  
+}

@@ -68,6 +68,11 @@ function PgQuiz() {
       </div>
 
 
+      <div className="box-geral">
+        <div className="box-geral-titulo">POR CATEGORIA</div>
+              </div>
+
+
       <div className="botoes-categorias">
         {categorias.map((cat, index) => (
           <button key={index} onClick={() => iniciarQuiz(cat)} className="categoria-btn">
