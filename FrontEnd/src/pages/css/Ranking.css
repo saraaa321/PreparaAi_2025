@@ -1,81 +1,93 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white; /* Cor de fundo clara e neutra */
-    color: #333; /* Cor padrão de texto */
-    line-height: 1.6;
-    min-height: 100vh;
-  }
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white; 
+  color: #333; 
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden; /* evita rolagem lateral */
+}
 
 .ranking-container {
-    font-family: sans-serif;
-  }
-  
-  .ranking-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #002b45;
-    padding: 10px 20px;
-  }
-  
-  .ranking-logo {
-    height: 50px;
-  }
-  
-  .ranking-button {
-    background-color: #2d89ef;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .ranking-title {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .ranking-title img {
-    height: 80px;
-  }
-  
-  .ranking-table-container {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 900px;
-  }
-  
-  .ranking-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .ranking-table th {
-    padding: 12px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-    background-color: white;
-    color: #000;
-  }
-  
-  .linha-par {
-    background-color: #002b45;
-    height: 50px;
-    color: white;
-  }
-  
-  .linha-impar {
-    background-color: #2d89ef;
-    height: 50px;
-  }
-  
+  font-family: sans-serif;
+}
+
+.ranking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002b45;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* permite quebrar em telas pequenas */
+}
+
+.ranking-logo {
+  height: 40px; /* reduz um pouco para mobile */
+  max-width: 100%;
+}
+
+.ranking-button {
+  background-color: #2d89ef;
+  color: white;
+  font-weight: bold;
+  padding: 10px 16px; /* levemente menor para mobile */
+  border: none;
+  border-radius: 4px;
+  font-size: 14px; /* reduz para caber melhor */
+  cursor: pointer;
+  margin-top: 10px; /* separa caso quebre de linha */
+}
+
+.ranking-title {
+  text-align: center;
+  margin: 20px 10px; /* reduz espaço lateral */
+}
+
+.ranking-title img {
+  height: 60px; /* reduz imagem no mobile */
+  max-width: 100%;
+}
+
+.ranking-table-container {
+  margin: 20px auto;
+  width: 95%;
+  max-width: 900px;
+  overflow-x: auto; /* permite rolagem lateral se necessário */
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px; /* evita quebrar demais, mas ajusta com overflow */
+}
+
+.ranking-table th {
+  padding: 10px; /* reduz padding */
+  font-size: 16px; /* menor para caber mais texto */
+  font-weight: bold;
+  text-align: left;
+  background-color: white;
+  color: #000;
+}
+
+.ranking-table td {
+  padding: 8px; /* mantém confortável */
+  font-size: 14px;
+}
+
+.linha-par {
+  background-color: #002b45;
+  height: 45px; /* levemente reduzido */
+  color: white;
+}
+
+.linha-impar {
+  background-color: #2d89ef;
+  height: 45px;
+  color: white;
+}

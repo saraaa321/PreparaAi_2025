@@ -530,8 +530,129 @@ const perguntas = [
         "pergunta": "No século XX, o modernismo brasileiro foi muito influnete na criação de uma nova identidade cultural. Qual foi o principal movimento literário desse período?",
         "respostas": ["Romantismo", "Realismo", "Modernismo", "Barroco"],
         "respostaCorreta": "Modernismo"
-    }
+    },
+      {
+      "categoria": "Inglês",
+      "pergunta": "Qual é o passado simples do verbo 'go'?",
+      "respostas": [
+          "Went",
+          "Gone",
+          "Goes",
+          "Going"
+      ],
+      "respostaCorreta": "Went"
+  },
+  {
+      "categoria": "Inglês",
+      "pergunta": "Qual é o plural de 'child'?",
+      "respostas": [
+          "Childs",
+          "Children",
+          "Childes",
+          "Childer"
+      ],
+      "respostaCorreta": "Children"
+  },
+
+  {
+    "categoria": "Inglês",
+    "pergunta": "Qual é a forma correta do verbo 'to be' no passado para a primeira pessoa do singular?",
+    "respostas": [
+        "Am",
+        "Is",
+        "Was",
+        "Were"
+    ],
+    "respostaCorreta": "Was"
+  },
+
+  {
+    "categoria": "Inglês",
+    "pergunta": "Qual é um sinônimo para 'maybe'?",
+    "respostas": [
+        "Perhaps",
+        "Definitely",
+        "Certainly",
+        "Surely"
+    ],
+    "respostaCorreta": "Perhaps"
+  },
+
+  {
+    "categoria": "Inglês",
+    "pergunta": "Qual é o sujeito da frase: 'She loves to read books'?",
+    "respostas": [
+        "She",
+        "Loves",
+        "Read",
+        "Books"
+    ],
+    "respostaCorreta": "She"
+  },
+
+  {
+    "categoria": "Inglês",
+    "pergunta": "A regra grmatical para formar o passado simples de verbos regulares é adicionar:",
+    "respostas": [
+        "-ed",
+        "-ing",
+        "-s",
+        "-es"
+    ],
+    "respostaCorreta": "-ed"
+  },
+
+  {
+    "categoria": "Inglês",
+    "pergunta": "A forma correta do verbo 'to have' no passado para a segunda pessoa do singular é:",
+    "respostas": [
+        "Have",
+        "Has",
+        "Had",
+        "Haves"
+    ],
+    "respostaCorreta": "Had"
+  },
+
+  {
+    "categoria": "Inglês",
+    "pergunta": "Qual palavra falta na frase 'She is ___ than her sister'?",
+    "respostas": [
+        "Taller",
+        "Tallest",
+        "Tall",
+        "More tall"
+    ],
+    "respostaCorreta": "Taller"
+  },
+
+  {
+    "categoria": "Inglês",
+    "pergunta": "What is the translation of the text 'We went to do a test'?",
+    "respostas": [
+        "Nós fomos fazer um teste",
+        "Nós vamos fazer um teste",
+        "Nós fizemos um teste",
+        "Nós fazemos um teste"
+    ],
+    "respostaCorreta": "Nós fomos fazer um teste"
+  },
+
+    {
+  "categoria": "Inglês",
+  "pergunta": "What is the subject of the sentence 'When I go to bed?'?",
+  "respostas": [
+      "When",
+      "I",
+      "Go",
+      "Bed"
+  ],
+  "respostaCorreta": "I"
+  },
+  
 ]
+
+
 
 
 

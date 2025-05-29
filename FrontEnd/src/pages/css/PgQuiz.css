@@ -100,3 +100,40 @@ body, html, #root {
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
+.botoes-categorias{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #c1dcfa;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin: 20px;
+  margin-top:40px;
+}
+
+
+.categoria-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 32px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin: 10px;
+  
+}
+
+.categoria-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.20);
+}

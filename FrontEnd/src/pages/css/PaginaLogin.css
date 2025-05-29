@@ -232,4 +232,8 @@ h1{
     height: auto;
     overflow: visible;
   }
+  .rodape{
+    height: 1%;
+    font-size: 0px;
+  }
 }
