@@ -2,12 +2,18 @@ const admin = require("firebase-admin");
 const serviceAccount = require("./firebase-key.json"); // certifique-se que está correto
 
 
+
+
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 });
 
 
+
+
 const db = admin.firestore();
+
+
 
 
 // Consolidated perguntas array to fix syntax errors
@@ -36,6 +42,8 @@ const perguntas = [
     },
 
 
+
+
     {
         "categoria": "História",
         "pergunta": "Sobre a economia do Brasil Colônia, é correto afirmar que:",
@@ -49,12 +57,16 @@ const perguntas = [
     },
 
 
+
+
     {
         "categoria": "História",
         "pergunta": "A abolição da escravidão no Brasil ocorreu em:",
         "respostas": ["1822", " 1888", "1889", "1871"],
         "respostaCorreta": " 1888"
     },
+
+
 
 
     {
@@ -70,17 +82,20 @@ const perguntas = [
     },
 
 
+
+
     {
         "categoria": "História",
-        "pergunta": " A Inconfidência Mineira foi:",
+        "pergunta": "A Inconfidência Mineira foi:",
         "respostas": [
-            "um movimento abolicionista do século XIX.",
-            " um movimento de caráter separatista ocorrido no século XVIII.",
-            "uma revolta de escravizados no Nordeste.",
-            "um movimento camponês pela reforma agrária."
+            "Um movimento abolicionista do século XIX.",
+            "Um movimento de caráter separatista ocorrido no século XVIII.",
+            "Uma revolta de escravizados no Nordeste.",
+            "Um movimento camponês pela reforma agrária."
         ],
-        "respostaCorreta": "um movimento de caráter separatista ocorrido no século XVIII."
+        "respostaCorreta": "Um movimento de caráter separatista ocorrido no século XVIII."
     },
+
 
 
     {
@@ -88,12 +103,14 @@ const perguntas = [
         "pergunta": " A Primeira Guerra Mundial foi desencadeada principalmente por:",
         "respostas": [
             "disputas coloniais na América Latina.",
-            "  rivalidades imperialistas e o assassinato do arquiduque Francisco Ferdinando.",
+            "rivalidades imperialistas e o assassinato do arquiduque Francisco Ferdinando.",
             "conflitos religiosos entre protestantes e católicos.",
             "divergências comerciais entre EUA e Alemanha."
         ],
         "respostaCorreta": "rivalidades imperialistas e o assassinato do arquiduque Francisco Ferdinando."
     },
+
+
 
 
     {
@@ -103,9 +120,9 @@ const perguntas = [
             "A substituição do trabalho artesanal pela produção mecanizada.",
             " A expansão do feudalismo.",
             "A valorização da agricultura de subsistência.",
-            "A organização das corporações de ofício."
+            "A passagem de altas taxas de natalidade e mortalidade para baixas"
         ],
-        "respostaCorreta": "A passagem de altas taxas de natalidade e mortalidade para baixas"
+        "respostaCorreta": "A substituição do trabalho artesanal pela produção mecanizada."
     },
     {
         "categoria": "História",
@@ -125,10 +142,12 @@ const perguntas = [
             " a vitória dos EUA sobre a URSS em combate.",
             " a ascensão do nazismo.",
             "a queda do Muro de Berlim e o fim da URSS.",
-            "ua independência da China."
+            "a independência da China."
         ],
         "respostaCorreta": "a queda do Muro de Berlim e o fim da URSS."
     },
+
+
 
 
     {
@@ -140,7 +159,7 @@ const perguntas = [
             "contenção da entrada de imigrantes",
             "elevação do crescimento vegetativo"
         ],
-        "respostaCorreta": "12"
+        "respostaCorreta": "estabilização da pirâmide etária"
     },
     {
         "categoria": "Geografia",
@@ -188,6 +207,8 @@ const perguntas = [
     },
 
 
+
+
     {
         "categoria": "Geografia",
         "pergunta": "A linha do Equador divide a Terra em:",
@@ -201,12 +222,16 @@ const perguntas = [
     },
 
 
+
+
     {
         "categoria": "Geografia",
         "pergunta": "Qual é o bioma predominante na região Norte do Brasil?",
         "respostas": ["Cerrado", "Caatinga", "Pampa", "Floresta Amazônica"],
-        "respostaCorreta": "Norte e sul"
+        "respostaCorreta": "Floresta Amazônica"
     },
+
+
 
 
     {
@@ -215,6 +240,8 @@ const perguntas = [
         "respostas": ["Equatorial", "Tropical", "Semiárido", "Temperado"],
         "respostaCorreta": "Semiárido"
     },
+
+
 
 
     {
@@ -230,6 +257,8 @@ const perguntas = [
     },
 
 
+
+
     {
         "categoria": "Geografia",
         "pergunta": "O que representa o conceito de transição demográfica?",
@@ -239,8 +268,10 @@ const perguntas = [
             "A passagem de altas taxas de natalidade e mortalidade para baixas",
             "A migração de refugiados em conflitos armados"
         ],
-        "respostaCorreta": "A passagem de altas taxas de natalidade e mortalidade para baixas."
+        "respostaCorreta": "A passagem de altas taxas de natalidade e mortalidade para baixas"
     },
+
+
 
 
     {
@@ -252,7 +283,7 @@ const perguntas = [
             "Sensação térmica do ambiente",
             "Temperatura absoluta do corpo"
         ],
-        "respostaCorreta": "Newton"
+        "respostaCorreta": "Energia em trânsito devido à diferença de temperatura"
     },
     {
         "categoria": "Física",
@@ -283,7 +314,7 @@ const perguntas = [
         "respostas": [
             "A caixa não tem massa.",
             "A força aplicada é maior do que a força de atrito.",
-            " As forças estão em equilíbrio.",
+            "As forças estão em equilíbrio.",
             " A força resultante é diferente de zero."
         ],
         "respostaCorreta": "As forças estão em equilíbrio."
@@ -292,7 +323,7 @@ const perguntas = [
         "categoria": "Física",
         "pergunta": " Qual é a unidade de medida da força no Sistema Internacional?",
         "respostas": ["Pascal", "Joule", "Watt", "Newton"],
-        "respostaCorreta": "Newton."
+        "respostaCorreta": "Newton"
     },
     {
         "categoria": "Física",
@@ -303,13 +334,13 @@ const perguntas = [
             "Uma força que atrai os corpos para o centro da Terra",
             "Uma força gerada apenas por ímãs"
         ],
-        "respostaCorreta": "Newton."
+        "respostaCorreta": "Uma força que atrai os corpos para o centro da Terra"
     },
     {
         "categoria": "Física",
         "pergunta": " Um carro de 1.000 kg acelera a 2 m/s². Qual a força resultante sobre ele?",
         "respostas": ["500 N", "1.000 N", "2.000 N", "200 N"],
-        "respostaCorreta": "2.000 N."
+        "respostaCorreta": "2.000 N"
     },
     {
         "categoria": "Física",
@@ -320,7 +351,7 @@ const perguntas = [
             "Terceira Lei",
             "Lei da Gravitação Universal"
         ],
-        "respostaCorreta": "Primeira Lei."
+        "respostaCorreta": "Primeira Lei"
     },
     {
         "categoria": "Física",
@@ -331,8 +362,10 @@ const perguntas = [
             "Absorção da luz",
             "Polarização"
         ],
-        "respostaCorreta": "Refração e dispersão."
+        "respostaCorreta": "Refração e dispersão"
     },
+
+
 
 
     {
@@ -420,6 +453,8 @@ const perguntas = [
         "respostas": ["Sólido", "Líquido", "Gasoso", "Plasma"],
         "respostaCorreta": "Gasoso"
     },
+
+
 
 
     {
@@ -514,6 +549,8 @@ const perguntas = [
     },
 
 
+
+
     {
         "categoria": "Língua Portuguesa",
         "pergunta": "O romasntismo teve como características principais:",
@@ -531,126 +568,140 @@ const perguntas = [
         "respostas": ["Romantismo", "Realismo", "Modernismo", "Barroco"],
         "respostaCorreta": "Modernismo"
     },
-      {
-      "categoria": "Inglês",
-      "pergunta": "Qual é o passado simples do verbo 'go'?",
-      "respostas": [
-          "Went",
-          "Gone",
-          "Goes",
-          "Going"
-      ],
-      "respostaCorreta": "Went"
-  },
-  {
-      "categoria": "Inglês",
-      "pergunta": "Qual é o plural de 'child'?",
-      "respostas": [
-          "Childs",
-          "Children",
-          "Childes",
-          "Childer"
-      ],
-      "respostaCorreta": "Children"
-  },
+    {
+        "categoria": "Inglês",
+        "pergunta": "Qual é o passado simples do verbo 'go'?",
+        "respostas": [
+            "Went",
+            "Gone",
+            "Goes",
+            "Going"
+        ],
+        "respostaCorreta": "Went"
+    },
+    {
+        "categoria": "Inglês",
+        "pergunta": "Qual é o plural de 'child'?",
+        "respostas": [
+            "Childs",
+            "Children",
+            "Childes",
+            "Childer"
+        ],
+        "respostaCorreta": "Children"
+    },
 
-  {
-    "categoria": "Inglês",
-    "pergunta": "Qual é a forma correta do verbo 'to be' no passado para a primeira pessoa do singular?",
-    "respostas": [
-        "Am",
-        "Is",
-        "Was",
-        "Were"
-    ],
-    "respostaCorreta": "Was"
-  },
-
-  {
-    "categoria": "Inglês",
-    "pergunta": "Qual é um sinônimo para 'maybe'?",
-    "respostas": [
-        "Perhaps",
-        "Definitely",
-        "Certainly",
-        "Surely"
-    ],
-    "respostaCorreta": "Perhaps"
-  },
-
-  {
-    "categoria": "Inglês",
-    "pergunta": "Qual é o sujeito da frase: 'She loves to read books'?",
-    "respostas": [
-        "She",
-        "Loves",
-        "Read",
-        "Books"
-    ],
-    "respostaCorreta": "She"
-  },
-
-  {
-    "categoria": "Inglês",
-    "pergunta": "A regra grmatical para formar o passado simples de verbos regulares é adicionar:",
-    "respostas": [
-        "-ed",
-        "-ing",
-        "-s",
-        "-es"
-    ],
-    "respostaCorreta": "-ed"
-  },
-
-  {
-    "categoria": "Inglês",
-    "pergunta": "A forma correta do verbo 'to have' no passado para a segunda pessoa do singular é:",
-    "respostas": [
-        "Have",
-        "Has",
-        "Had",
-        "Haves"
-    ],
-    "respostaCorreta": "Had"
-  },
-
-  {
-    "categoria": "Inglês",
-    "pergunta": "Qual palavra falta na frase 'She is ___ than her sister'?",
-    "respostas": [
-        "Taller",
-        "Tallest",
-        "Tall",
-        "More tall"
-    ],
-    "respostaCorreta": "Taller"
-  },
-
-  {
-    "categoria": "Inglês",
-    "pergunta": "What is the translation of the text 'We went to do a test'?",
-    "respostas": [
-        "Nós fomos fazer um teste",
-        "Nós vamos fazer um teste",
-        "Nós fizemos um teste",
-        "Nós fazemos um teste"
-    ],
-    "respostaCorreta": "Nós fomos fazer um teste"
-  },
 
     {
-  "categoria": "Inglês",
-  "pergunta": "What is the subject of the sentence 'When I go to bed?'?",
-  "respostas": [
-      "When",
-      "I",
-      "Go",
-      "Bed"
-  ],
-  "respostaCorreta": "I"
-  },
-  
+        "categoria": "Inglês",
+        "pergunta": "Qual é a forma correta do verbo 'to be' no passado para a primeira pessoa do singular?",
+        "respostas": [
+            "Am",
+            "Is",
+            "Was",
+            "Were"
+        ],
+        "respostaCorreta": "Was"
+    },
+
+
+    {
+        "categoria": "Inglês",
+        "pergunta": "Qual é um sinônimo para 'maybe'?",
+        "respostas": [
+            "Perhaps",
+            "Definitely",
+            "Certainly",
+            "Surely"
+        ],
+        "respostaCorreta": "Perhaps"
+    },
+
+
+    {
+        "categoria": "Inglês",
+        "pergunta": "Qual é o sujeito da frase: 'She loves to read books'?",
+        "respostas": [
+            "She",
+            "Loves",
+            "Read",
+            "Books"
+        ],
+        "respostaCorreta": "She"
+    },
+
+
+    {
+        "categoria": "Inglês",
+        "pergunta": "A regra grmatical para formar o passado simples de verbos regulares é adicionar:",
+        "respostas": [
+            "-ed",
+            "-ing",
+            "-s",
+            "-es"
+        ],
+        "respostaCorreta": "-ed"
+    },
+
+
+    {
+        "categoria": "Inglês",
+        "pergunta": "A forma correta do verbo 'to have' no passado para a segunda pessoa do singular é:",
+        "respostas": [
+            "Have",
+            "Has",
+            "Had",
+            "Haves"
+        ],
+        "respostaCorreta": "Had"
+    },
+
+
+    {
+        "categoria": "Inglês",
+        "pergunta": "Qual palavra falta na frase 'She is ___ than her sister'?",
+        "respostas": [
+            "Taller",
+            "Tallest",
+            "Tall",
+            "More tall"
+        ],
+        "respostaCorreta": "Taller"
+    },
+
+
+    {
+        "categoria": "Inglês",
+        "pergunta": "What is the translation of the text 'We went to do a test'?",
+        "respostas": [
+            "Nós fomos fazer um teste",
+            "Nós vamos fazer um teste",
+            "Nós fizemos um teste",
+            "Nós fazemos um teste"
+        ],
+        "respostaCorreta": "Nós fomos fazer um teste"
+    },
+
+
+    {
+        "categoria": "Inglês",
+        "pergunta": "What is the subject of the sentence 'When I go to bed?'?",
+        "respostas": [
+            "When",
+            "I",
+            "Go",
+            "Bed"
+        ],
+        "respostaCorreta": "I"
+    },
+
 ]
+
+
+
+
+
+
 
 
 
@@ -662,10 +713,14 @@ async function inserirPerguntas() {
     const batch = db.batch();
 
 
+
+
     perguntas.forEach((pergunta) => {
         const docRef = db.collection("perguntas").doc(); // ID automático
         batch.set(docRef, pergunta);
     });
+
+
 
 
     await batch.commit();
@@ -673,5 +728,10 @@ async function inserirPerguntas() {
 }
 
 
+
+
 inserirPerguntas().catch(console.error);
+
+
+
 
