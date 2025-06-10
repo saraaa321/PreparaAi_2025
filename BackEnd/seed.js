@@ -551,23 +551,120 @@ const perguntas = [
 
 
 
+    
+
     {
-        "categoria": "Língua Portuguesa",
-        "pergunta": "O romasntismo teve como características principais:",
-        "respostas": [
-            "Racionalismo e empirismo",
-            "Sentimentalismo e subjetivismo",
-            "Realismo e objetividade",
-            "Clareza e simplicidade"
-        ],
-        "respostaCorreta": "Sentimentalismo e subjetivismo"
+      "categoria": "Língua Portuguesa",
+      "pergunta": "O romantismo teve como características principais:",
+      "respostas": [
+        "Racionalismo e empirismo",
+        "Sentimentalismo e subjetivismo",
+        "Realismo e objetividade",
+        "Clareza e simplicidade"
+      ],
+      "respostaCorreta": "Sentimentalismo e subjetivismo"
     },
     {
-        "categoria": "Língua Portuguesa",
-        "pergunta": "No século XX, o modernismo brasileiro foi muito influnete na criação de uma nova identidade cultural. Qual foi o principal movimento literário desse período?",
-        "respostas": ["Romantismo", "Realismo", "Modernismo", "Barroco"],
-        "respostaCorreta": "Modernismo"
+      "categoria": "Língua Portuguesa",
+      "pergunta": "No século XX, o modernismo brasileiro foi muito influente na criação de uma nova identidade cultural. Qual foi o principal movimento literário desse período?",
+      "respostas": [
+        "Romantismo",
+        "Realismo",
+        "Modernismo",
+        "Barroco"
+      ],
+      "respostaCorreta": "Modernismo"
     },
+    {
+      "categoria": "Língua Portuguesa",
+      "pergunta": "A crônica é um gênero literário que se caracteriza por:",
+      "respostas": [
+        "Narrar fatos históricos",
+        "Descrever paisagens naturais",
+        "Relatar acontecimentos do cotidiano com crítica e subjetiva, e com um toque de humor",
+        "Analisar obras literárias"
+      ],
+      "respostaCorreta": "Relatar acontecimentos do cotidiano com crítica e subjetiva, e com um toque de humor"
+    },
+    {
+      "categoria": "Língua Portuguesa",
+      "pergunta": "As características dos poemas denominados sonetos são:",
+      "respostas": [
+        "Estrofes de quatro versos",
+        "Rimas alternadas",
+        "Dois quartetos e dois tercetos",
+        "Rimas emparelhadas"
+      ],
+      "respostaCorreta": "Dois quartetos e dois tercetos"
+    },
+    {
+      "categoria": "Língua Portuguesa",
+      "pergunta": "A obra 'O cortiço', de Aluísio de Azevedo, é um exemplo de qual movimento literário?",
+      "respostas": [
+        "Romantismo",
+        "Naturalismo",
+        "Modernismo",
+        "Barroco"
+      ],
+      "respostaCorreta": "Naturalismo"
+    },
+    {
+      "categoria": "Língua Portuguesa",
+      "pergunta": "O trovadorismo é um movimento literário conhecido pela:",
+      "respostas": [
+        "A produção de poesias líricas e épicas",
+        "A prosa de cordel",
+        "A literatura de cordel",
+        "A literatura de viagem"
+      ],
+      "respostaCorreta": "A produção de poesias líricas e épicas"
+    },
+    {
+      "categoria": "Língua Portuguesa",
+      "pergunta": "Um exemplo de subjetividade na literatura é:",
+      "respostas": [
+        "A descrição detalhada de um lugares",
+        "A análise de um personagem fictício",
+        "A expressão dos sentimentos e emoções",
+        "A narração de um fato histórico"
+      ],
+      "respostaCorreta": "A expressão dos sentimentos e emoções"
+    },
+    {
+      "categoria": "Língua Portuguesa",
+      "pergunta": "A tese de um texto dissertativo consiste em:",
+      "respostas": [
+        "Ideia principal que o autor pretende defender",
+        "Um resumo do texto, apresentado crítica ao tema",
+        "Uma introdução ao assunto de modo cético",
+        "Uma conclusão sem influência do autor"
+      ],
+      "respostaCorreta": "Ideia principal que o autor pretende defender"
+    },
+    {
+      "categoria": "Língua Portuguesa",
+      "pergunta": "Qual trecho representa a opinião do autor?",
+      "respostas": [
+        "A pesquisa foi realizada com 100 pessoas",
+        "Os resultados foram surpreendentes",
+        "A maioria dos entrevistados preferiu o produto A",
+        "O estudo foi publicado em uma revista científica"
+      ],
+      "respostaCorreta": "Os resultados foram surpreendentes"
+    },
+    {
+      "categoria": "Língua Portuguesa",
+      "pergunta": "Um texto argumentativo tem como objetivo:",
+      "respostas": [
+        "Informar o leitor sobre um assunto",
+        "Convencer o leitor sobre um ponto de vista",
+        "Contar uma história",
+        "Descrever um lugar"
+      ],
+      "respostaCorreta": "Convencer o leitor sobre um ponto de vista"
+    },  
+
+
     {
         "categoria": "Inglês",
         "pergunta": "Qual é o passado simples do verbo 'go'?",

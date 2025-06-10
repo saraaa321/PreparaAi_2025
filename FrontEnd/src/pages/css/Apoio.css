@@ -60,6 +60,9 @@ html, body {
   padding: 0 1rem;
   box-sizing: border-box;
   text-align: center;
+  display: grid;
+  grid-template-columns:  1fr;
+  margin-bottom: 10%;
 }
 .apoio-titulo {
   font-size: 2.0rem;
@@ -102,4 +105,8 @@ html, body {
   .apoio-texto {
     flex: 1 1 100%;
   }
+}
+
+.apoio-proposta{
+  margin-bottom: 5%;
 }

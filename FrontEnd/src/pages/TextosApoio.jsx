@@ -25,7 +25,7 @@ const bancoDeTextos = {
         <p><strong>Fonte:</strong>https://cangurunews.com.br/alfabetizacao-criancas/</p>
       </>
     ),
-      imagem: {tirinha1},
+      imagem: tirinha1,
       proposta: 'A partir da leitura dos textos motivadores seguintes e com base nos conhecimentos construídos ao longo de sua formação, redija texto dissertativo argumentativo em modalidade escrita formal da língua portuguesa sobre o tema ‘‘A importância da alfabetização na infância”, apresentando proposta de intervenção. Selecione, organize e relacione, de forma coerente e coesa, argumentos e fatos para defesa de seu ponto de vista.'
     }
   },
@@ -71,7 +71,7 @@ const bancoDeTextos = {
           <p><strong>Fonte:</strong>https://www.nexojornal.com.br/expresso/2020/01/08/Quais-empresas-o-governo-federal-quer-privatizar-em-2020</p>
         </>
       ),
-      imagem: {tirinha3},
+      imagem: tirinha3,
       proposta: 'Com base nos textos apresentados e em seus próprios conhecimentos, escreva uma redação de gênero dissertativo, empregando a norma-padrão da língua portuguesa, sobre o tema: Privatizações são benéficas para o Brasil?'
     }
   },  
@@ -167,7 +167,7 @@ const Apoio = () => {
         <img src={logo} alt="Logo" className="apoio-logo" />
         <h2 className="apoio-subtitulo">Textos de Apoio</h2>
         <button className="apoio-voltar" onClick={() => window.history.back()}>
-         Sair
+         Voltar
         </button>
       </header>
       <h1 className="apoio-titulo">{dados.tema}</h1>
@@ -202,7 +202,7 @@ const Apoio = () => {
 
         <section className="apoio-proposta">
           <h2>Proposta de Redação</h2>
-          <p>{dados.textos.proposta}</p>
+          <p className='apoio-proposta'>{dados.textos.proposta}</p>
         </section>
       </main>
     </div>

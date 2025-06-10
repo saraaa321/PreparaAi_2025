@@ -65,7 +65,7 @@ const Redacao = () => {
       <header className="topo">
         <img src="/logo.png" alt="Logo" className="logo" />
         <h1>Redação</h1>
-        <button className="botao-sair">Sair</button>
+        <button className="botao-sair">Voltar</button>
       </header>
 
       <h2 className="titulo">Temas - Redação</h2>

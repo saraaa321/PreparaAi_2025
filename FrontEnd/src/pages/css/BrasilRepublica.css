@@ -1,23 +1,35 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
 .brasil-republica-container {
   font-family: 'Segoe UI', sans-serif;
   color: #222;
   background: linear-gradient(to bottom, #fdfdfd, #f1f1f1);
+   min-height: 100vh;
+            display: flex;
+            flex-direction: column;
 }
  
-.top-bar {
+.top-barb {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #004d7a;
   padding: 10px 20px;
   color: white;
+   position: sticky;
+            top: 0;
+            z-index: 100;
 }
  
-.logo {
+.logob {
   height: 50px;
 }
  
-.top-buttons .btn {
+.top-buttonsb .btn {
   background: #007bb5;
   border: none;
   color: rgb(255, 255, 255);
@@ -28,25 +40,30 @@
   transition: background 0.3s ease;
 }
  
-.top-buttons .btn:hover {
+.top-buttonsb .btn:hover {
   background: #005f8e;
 }
  
-.content {
+.contentb {
   padding: 20px;
   max-width: 1000px; /* Limite a largura do conteúdo para melhor leitura */
   margin: 0 auto; /* Centraliza o conteúdo */
+  width: 100%;
+            flex: 1; /* Permite que o conteúdo ocupe o espaço disponível */
+            display: flex;
+            flex-direction: column;
 }
  
-.top-section-buttons {
+.top-section-buttonsb {
   display: flex;
   justify-content: space-between; /* Coloca os itens nas extremidades */
   align-items: center;
   margin-bottom: 30px; /* Espaço entre os botões e o título */
   padding: 0 10px; /* Adiciona um pequeno padding nas laterais */
+  width: 100%;
 }
  
-.btn.back-btn {
+.btnb.back-btn {
   margin-top: 0;
   margin-left: 20px;
   background-color: var(--secondary-color);
@@ -65,7 +82,7 @@
   top: 100px;
 }
  
-.btn.back-btn:hover {
+.btnb.back-btn:hover {
   background: #0d47a1;
   transform: translateY(-2px);
 }
@@ -183,7 +200,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-.footer{
+.footerb{
   background-color: #004d7a;
   color: white;
   text-align: center;

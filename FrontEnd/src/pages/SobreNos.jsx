@@ -26,7 +26,7 @@ const SobreNos = () => {
         </div>
       </header>
 
-      <main className="main-content">
+      <main className="main-contente">
         <img src={sobren} alt="Sobre Nós" className="sobrenos" />
         <p className="p">
           Somos um grupo de estudantes que, após uma trajetória intensa de preparação conjunta para o vestibular, conquistou o primeiro lugar em nossas respectivas instituições de ensino superior. Com o desejo de retribuir e facilitar o caminho de outros vestibulandos, criamos este site com conteúdos, orientações e materiais de estudo de qualidade. Nosso objetivo é contribuir para que mais estudantes realizem o sonho da aprovação.

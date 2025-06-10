@@ -3,6 +3,13 @@ import './css/Red.css'
 import logo from '../assets/logo2.png';
 import { useNavigate } from 'react-router-dom';
 
+import alfabet from '../assets/alfabet.jpg';
+import fakenews from '../assets/fakenews.jpg';
+import democracia from '../assets/democracia.jpg';
+import adocao from '../assets/adocao.jpg';
+import privado from '../assets/privado.jpg';
+import aposta from '../assets/aposta.jpg';
+
 const Temas = () => {
   const navigate = useNavigate();
   const temas = [
@@ -10,42 +17,46 @@ const Temas = () => {
       id: 1,
       titulo: 'A importância da alfabetização na infância no Brasil',
       banca: 'ENEM',
-      imagem: 'alfabet.jpg',
+      imagem: alfabet
     },
     {
       id: 2,
       titulo: 'Os desafios de se combater as Fake News na Era da Informação',
       banca: 'ENEM',
-      imagem: 'fakenews.jpg',
+      imagem: fakenews,
     },
     {
       id: 3,
       titulo: 'Privatizações são benéficas para o Brasil?',
       banca: 'VUNESP',
-      imagem: 'privado.jpg',
+      imagem: privado,
     },
     {
       id: 4,
       titulo: 'Os desafios atuais para a democracia no Brasil e no mundo',
       banca: 'FUVEST',
-      imagem: 'democracia.jpg',
+      imagem: democracia,
     },
     {
       id: 5,
       titulo: 'Adoção: prática de amor incondicional ou seletivo?',
       banca: 'VUNESP',
-      imagem: 'adocao.jpg',
+      imagem: adocao,
     },
     {
       id: 6,
       titulo: 'Apostas online: Regulamentação para o consumidor e indução ao vício',
       banca: 'FUVEST',
-      imagem: 'aposta.jpg',
+      imagem: aposta,
     },
   ];
 
   const acessarTema = (id) => {
     navigate(`/textosapoio/${id}`);
+  };
+
+  const voltar = () => {
+    navigate('/PagInicial');
   };
   
 
@@ -54,7 +65,7 @@ const Temas = () => {
       <header className="topo">
       <img src={logo} alt="Logo" className="logo" />
         <h1>Redação</h1>
-        <button className="botao-sair">Sair</button>
+        <button className="botao-sair" onClick={voltar}>Voltar</button>
       </header>
 
       <h2 className="titulo">Temas - Redação</h2>
