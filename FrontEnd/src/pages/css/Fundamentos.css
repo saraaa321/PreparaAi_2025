@@ -1,0 +1,97 @@
+.fundamentos-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.fundamentos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.fundamentos-logo {
+  height: 50px;
+}
+
+.fundamentos-nav-btn {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: #0055a5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fundamentos-nav-btn:hover {
+  background-color: #003f7f;
+}
+
+.fundamentos-main {
+  margin-top: 20px;
+}
+
+.fundamentos-main h1 {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 16px;
+}
+
+.fundamentos-imagem {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+}
+
+.fundamentos-conteudo {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fundamentos-conteudo p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.fundamentos-conteudo ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.fundamentos-concluir-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fundamentos-concluir-btn:hover {
+  background-color: #218838;
+}
+
+.fundamentos-concluido-msg {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.fundamentos-imagem1 {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+}
