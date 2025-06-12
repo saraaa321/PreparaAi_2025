@@ -151,7 +151,7 @@ function Demografia() {
   };
 
   const voltar = () => {
-    navigate('/');
+    navigate('/Geografia');
   };
 
   return (
@@ -166,7 +166,9 @@ function Demografia() {
 
       <main className="content">
         <div className="top-content">
-          <button className="back-button" onClick={voltar}>Voltar</button>
+          <button className="back-button" onClick={voltar}>
+          <i className="fas fa-arrow-left" style={{ marginRight: '8px' }}></i> Voltar
+          </button>
         </div>
 
         <h1 className="titulo-principal">

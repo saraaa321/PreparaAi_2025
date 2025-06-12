@@ -29,7 +29,7 @@ export default function Home() {
 
   const handleSobreNos = () => navigate('/SobreNos');
 
-  const handleInicio = () => navigate('/PagInicial');
+  const handleInicio = () => navigate('/Resumos');
 
   const handleSaveAndNavigate = (path) => {
     setLastVisited(path);

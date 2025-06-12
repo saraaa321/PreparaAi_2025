@@ -44,7 +44,7 @@ function Feudalismo() {
     showNotification("✗ Conteúdo desmarcado como concluído.", "info");
   };
 
-  const voltar = () => navigate("/");
+  const voltar = () => navigate("/Historia");
 
   return (
     <div className="feudalismo-wrapper"> 
@@ -59,7 +59,7 @@ function Feudalismo() {
       <main className="content">
         <div className="top-content-actions">
           <button className="back-button" onClick={voltar}>
-            Voltar
+            <i className="fas fa-arrow-left" style={{ marginRight: '8px' }}></i> Voltar
           </button>
           {concluido ? (
             <button className="btn-concluido concluido" onClick={removerConcluido}>

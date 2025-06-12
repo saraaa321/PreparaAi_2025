@@ -169,7 +169,7 @@ function Guerras() {
   };
 
   const voltar = () => {
-    navigate('/');
+    navigate('/Historia');
   };
 
   return (
@@ -184,7 +184,9 @@ function Guerras() {
 
       <main className="contentg">
         <div className="top-content">
-          <button className="back-button" onClick={voltar}>Voltar</button>
+          <button className="back-button" onClick={voltar}>
+          <i className="fas fa-arrow-left" style={{ marginRight: '8px' }}></i> Voltar
+          </button>
         </div>
 
         <h1 className="titulo-principal">

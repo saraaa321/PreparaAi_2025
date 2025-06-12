@@ -635,7 +635,7 @@ function BrasilRepublica() {
         {/* Mantém suas classes e estrutura original */}
         <div className="top-section-buttons">
           <button className="btn back-btn" onClick={handleGoBack}>
-            ← Voltar
+             <i className="fas fa-arrow-left" style={{ marginRight: '8px' }}></i> Voltar
           </button>
           <button
             className="btn-concluir" // Sua classe original para o botão geral

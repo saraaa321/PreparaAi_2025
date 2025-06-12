@@ -45,7 +45,7 @@ function GeografiaEconomica() {
     showNotification("✗ Conteúdo desmarcado como concluído.", "info");
   };
 
-  const voltar = () => navigate("/");
+  const voltar = () => navigate("/Geografia");
 
   return (
     <div className="feudalismo-wrapper">
@@ -60,7 +60,7 @@ function GeografiaEconomica() {
       <main className="content">
         <div className="top-content-actions">
           <button className="back-button" onClick={voltar}>
-            Voltar
+           <i className="fas fa-arrow-left" style={{ marginRight: '8px' }}></i> Voltar
           </button>
 
           <div className="revolucao-actions">

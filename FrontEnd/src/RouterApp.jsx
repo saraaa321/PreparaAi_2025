@@ -22,6 +22,31 @@ import Demografia from "./pages/hpages/Demografia";
 import Economia from "./pages/hpages/Economia";
 import Geologia from "./pages/hpages/Geologia";
 
+import Biologia from './pages/Biologia';
+import Anatomia from "./pages/hpages/Anatomia";
+import ReinoPlantae from "./pages/hpages/ReinoPlantae";
+import Celulas from "./pages/hpages/Celulas";
+import Evolucao from "./pages/hpages/Evolucao";
+
+import Fisica from './pages/Fisica';
+import Mecanica from "./pages/hpages/Mecanica";
+import Ondas from "./pages/hpages/Ondas";
+import Termodinamica from "./pages/hpages/Termodinamica";
+import Fundamentos from "./pages/hpages/Fundamentos";
+
+import Portugues from './pages/Portugues';
+import Literatura from "./pages/hpages/EscolasLiterarias";
+import Generos from "./pages/hpages/GenerosTextuais";
+import Producao from "./pages/hpages/ProducaoTextual";
+import Interpretacao from "./pages/hpages/LeituraInterpretacao";
+
+import Ingles from './pages/Ingles';
+import SimplePast from './pages/hpages/SimplePast';
+import NounsAndPronouns from './pages/hpages/NounsAndPronouns';
+import AdjectivesAndComparatives from './pages/hpages/AdjectivesAndComparatives';
+import TranslationAndStructure from './pages/hpages/TranslationAndStructure';
+
+
 // import Ingles from './pages/Ingles';
 // import Matematica from './pages/Matematica';
 // import Portugues from './pages/Portugues';
@@ -56,6 +81,31 @@ const RouterApp = () => {
           <Route path="/Demografia" element={<Demografia user={user}/>} />
           <Route path="/Economia" element={<Economia user={user}/>} />
           <Route path="/Geologia" element={<Geologia user={user}/>} />
+
+      <Route path='/Biologia' element={<Biologia user={user}/>} />
+          <Route path="/Anatomia" element={<Anatomia user={user}/>} />
+          <Route path="/ReinoPlantae" element={<ReinoPlantae user={user}/>} />
+          <Route path="/Evolucao" element={<Evolucao user={user}/>} />
+          <Route path="/Celulas" element={<Celulas user={user}/>} />
+
+      <Route path="/Fisica" element={<Fisica user={user}/>} />
+          <Route path="/Mecanica" element={<Mecanica user={user}/>} />
+          <Route path="/Ondas" element={<Ondas user={user}/>} />
+          <Route path="/Termodinamica" element={<Termodinamica user={user}/>} />
+          <Route path="/Fundamentos" element={<Fundamentos user={user}/>} />
+
+      <Route path='/Portugues' element={<Portugues user={user}/>} />
+          <Route path="/Literatura" element={<Literatura user={user}/>} />
+          <Route path="/Generos" element={<Generos user={user}/>} />
+          <Route path="/Producao" element={<Producao user={user}/>} />
+          <Route path="/Interpretacao" element={<Interpretacao user={user}/>} />
+
+      <Route path='/Ingles' element={<Ingles user={user}/>} />
+          <Route path="/simplePast" element={<SimplePast user={user}/>} />
+          <Route path="/nounsAndPronouns" element={<NounsAndPronouns user={user}/>} />
+          <Route path="/adjectivesAndComparatives" element={<AdjectivesAndComparatives user={user}/>} />
+          <Route path="/translationAndStructure" element={<TranslationAndStructure user={user}/>} />
+
 
       {/* <Route path='/Ingles' element={<Ingles user={user}/>} />
       <Route path='/Matematica' element={<Matematica user={user}/>} />

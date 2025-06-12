@@ -30,7 +30,7 @@ export default function Home() {
   };
 
   const handleLogout = () => {
-    alert("Você saiu com sucesso.");
+    navigate("/Resumos");
   };
 
   const handleSaveAndNavigate = (path) => {
@@ -44,7 +44,7 @@ export default function Home() {
         <img src={logo} alt="Gabarita Mente" className="logo" />
         <div className="top-buttons">
           <button className="btn" onClick={handleSobreNos}>Sobre Nós</button>
-          <button className="btn sair" onClick={handleLogout}>Sair</button>
+          <button className="btn sair" onClick={handleLogout}>Voltar</button>
         </div>
       </header>
 

@@ -174,7 +174,7 @@ function Geologia() {
   const handleSobreNos = () => alert("Página 'Sobre Nós' em construção.");
   const handleLogout = () => alert("Você saiu com sucesso.");
   const handleTabClick = (itemId, tabName) => setActiveTab(prev => ({ ...prev, [itemId]: tabName }));
-  const voltar = () => navigate('/');
+  const voltar = () => navigate('/Geografia');
 
   return (
     <div className="geologia-wrapper">

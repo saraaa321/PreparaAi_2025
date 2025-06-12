@@ -306,7 +306,7 @@ function Revolucoes() {
   };
  
   const voltar = () => {
-    navigate('/');
+    navigate('/Historia');
   };
  
   return (
@@ -322,7 +322,7 @@ function Revolucoes() {
       <main className="content">
         <div className="top-content">
         <button className="back-button" onClick={voltar}>
-          <i></i> Voltar
+         <i className="fas fa-arrow-left" style={{ marginRight: '8px' }}></i> Voltar
         </button>
         </div>
  

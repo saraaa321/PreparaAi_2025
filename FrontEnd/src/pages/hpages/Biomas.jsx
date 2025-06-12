@@ -197,7 +197,7 @@ function Biomas() {
   };
 
   const voltar = () => {
-    navigate('/');
+    navigate('/Geografia');
   };
 
   return (
