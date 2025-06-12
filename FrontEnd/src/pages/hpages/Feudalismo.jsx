@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import logo from "../../assets/logo.png";
-import estruturaImg from '../..//assets/estrutura.png';
-import "../css/Feudalismo.css"; 
+import estruturaImg from '../../assets/estrutura.png';
+import "../Css/Feudalismo.css"; 
 
 function Feudalismo() {
   const navigate = useNavigate(); 
@@ -44,7 +44,7 @@ function Feudalismo() {
     showNotification("✗ Conteúdo desmarcado como concluído.", "info");
   };
 
-  const voltar = () => navigate("/Historia");
+  const voltar = () => navigate("/");
 
   return (
     <div className="feudalismo-wrapper"> 

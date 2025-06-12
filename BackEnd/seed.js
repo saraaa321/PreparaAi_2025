@@ -792,12 +792,68 @@ const perguntas = [
         "respostaCorreta": "I"
     },
 
+    // Matemática
+    {
+      "categoria": "Matemática",
+      "pergunta": "Uma escultura apresentada tem 100 micrômetros de comprimento. Um micrômetro é a milionésima parte de um metro. Usando notação científica, qual é a representação do comprimento dessa miniatura, em metro?",
+      "respostas": ["1,0 X 10-¹", "1,0 X 10-³", "10,0 X 10-²", "1,0 X 10-⁴"],
+      "respostaCorreta": "1,0 X 10-⁴"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "Quantos centímetros há em 278,5 metro?",
+      "respostas": ["2,785", "2785", "27850", "278500"],
+      "respostaCorreta": "27850"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "Quais todos os anagramas da frase “I AM POTTER”",
+      "respostas": ["9!", "4! 5!", "2 X 4! 5!", "4! 5! / 2"],
+      "respostaCorreta": "4! 5! / 2"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "Em um grupo de pessoas, as idades são: 10, 12, 15 e 17 anos. Caso uma pessoa de 16 anos junte-se ao grupo, o que acontece com a média das idades do grupo?",
+      "respostas": ["Aumentada em menos de 1 ano", "Aumentada em 2 anos", "Diminuída em 3 anos", "Diminuída em 5 anos"],
+      "respostaCorreta": "Aumentada em menos de 1 ano"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "Um carro consome 15 litros de gasolina para percorrer 100 km. Qual é o consumo do carro em 350 km?",
+      "respostas": ["7,5 litros", "10,5 litros", "12,5 litros", "15,5 litros"],
+      "respostaCorreta": "52,5 litros"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "Ao somar 32 graus com mais um número, é dado um total de 90 graus. Como é chamado esse ângulo?",
+      "respostas": ["Ângulo Suplementar", "Ângulo Reto", "Ângulo Obtuso", "Ângulo Complementar"],
+      "respostaCorreta": "Ângulo Complementar"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "Qual é o valor de x na equação 2x + 6 = 14?",
+      "respostas": ["3", "4", "5", "6"],
+      "respostaCorreta": "4"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "O número 17 é:",
+      "respostas": ["Par", "Múltiplo de 5", "Número primo", "Número irracional"],
+      "respostaCorreta": "Número primo"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "Qual o valor de 1 terabyte em gigabytes?",
+      "respostas": ["1.024", "1.020", "10.024", "1.020"],
+      "respostaCorreta": "1.024"
+    },
+    {
+      "categoria": "Matemática",
+      "pergunta": "Qual o maior lado de um triângulo retângulo de lado 6 e 8?",
+      "respostas": ["10", "12", "14", "16"],
+      "respostaCorreta": "10"
+    }
 ]
-
-
-
-
-
 
 
 

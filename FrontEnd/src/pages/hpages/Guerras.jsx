@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import "../css/Guerras.css";
+import "../Css/Guerras.css";
 
 const guerrasData = [
   {
@@ -169,7 +169,7 @@ function Guerras() {
   };
 
   const voltar = () => {
-    navigate('/Historia');
+    navigate('/');
   };
 
   return (
@@ -182,7 +182,7 @@ function Guerras() {
         </div>
       </header>
 
-      <main className="content">
+      <main className="contentg">
         <div className="top-content">
           <button className="back-button" onClick={voltar}>Voltar</button>
         </div>

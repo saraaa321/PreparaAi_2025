@@ -10,17 +10,20 @@ import matematica from '../assets/matematica.png';
 import portugues from '../assets/portugues.png';
 import quimica from '../assets/quimica.png';
 import historia from '../assets/historia.png';
+import biologia from '../assets/biologia.png';
 
 
 function BotoesComImagens() {
     const materias = [
+        { imagem: biologia, rota: '/Biologia' },
         { imagem: fisica, rota: '/Fisica' },
         { imagem: geografia, rota: '/Geografia' },
+        { imagem: historia, rota: '/Historia' },
         { imagem: ingles, rota: '/Ingles' },
         { imagem: matematica, rota: '/Matematica' },
         { imagem: portugues, rota: '/Portugues' },
         { imagem: quimica, rota: '/Quimica' },
-        { imagem: historia, rota: '/Historia' },
+       
     ];
 
     const navigate = useNavigate();

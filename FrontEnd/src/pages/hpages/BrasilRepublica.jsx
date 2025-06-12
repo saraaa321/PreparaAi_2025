@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
-import "../css/BrasilRepublica.css"; // Seus estilos originais serão usados aqui
+import "../Css/BrasilRepublica.css"; // Seus estilos originais serão usados aqui
 import { useNavigate } from "react-router-dom"; // Importar useNavigate para o botão voltar
  
 function BrasilRepublica() {
@@ -57,7 +57,7 @@ function BrasilRepublica() {
  
   // Função para lidar com a navegação de volta
   const handleGoBack = () => {
-    navigate("/Historia"); // Volta para a página inicial
+    navigate("/"); // Volta para a página inicial
   };
  
   // Adicionar IDs aos tópicos para controle de progresso individual
@@ -613,9 +613,9 @@ function BrasilRepublica() {
  
   return (
     <div className="brasil-republica-container">
-      <header className="top-barb">
-        <img src={logo} alt="Gabarita Mente" className="logob" />
-        <div className="top-buttonsb">
+      <header className="top-bar">
+        <img src={logo} alt="Gabarita Mente" className="logo" />
+        <div className="top-buttons">
           <button
             className="btn"
             onClick={() => alert("Página 'Sobre Nós' em construção.")}
@@ -631,10 +631,10 @@ function BrasilRepublica() {
         </div>
       </header>
  
-      <main className="contentb">
+      <main className="content">
         {/* Mantém suas classes e estrutura original */}
-        <div className="top-section-buttonsb">
-          <button className="btnb back-btn" onClick={handleGoBack}>
+        <div className="top-section-buttons">
+          <button className="btn back-btn" onClick={handleGoBack}>
             ← Voltar
           </button>
           <button
@@ -695,7 +695,7 @@ function BrasilRepublica() {
         ))}
       </main>
  
-      <footer className="footerb">
+      <footer className="footer">
         <div className="footer-content">
           <div className="footer-links">
             <ul>

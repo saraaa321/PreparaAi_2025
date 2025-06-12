@@ -55,7 +55,7 @@ const PaginaLogin = ({ setUser }) => {
         </div>
       </header>
       
-      <main>
+      <main className='mainl'>
         <div className="image-section">
           <img src={ImagemPoly} alt="Capa" className="main-image" />
        </div>

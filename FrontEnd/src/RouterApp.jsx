@@ -16,6 +16,12 @@ import Feudalismo from "./pages/hpages/Feudalismo";
 import BrasilRepublica from "./pages/hpages/BrasilRepublica";
 import Revolucoes from "./pages/hpages/Revolucoes";
 
+import Geografia from './pages/Geografia';
+import Biomas from "./pages/hpages/Biomas";
+import Demografia from "./pages/hpages/Demografia";
+import Economia from "./pages/hpages/Economia";
+import Geologia from "./pages/hpages/Geologia";
+
 // import Ingles from './pages/Ingles';
 // import Matematica from './pages/Matematica';
 // import Portugues from './pages/Portugues';
@@ -44,6 +50,12 @@ const RouterApp = () => {
           <Route path="/Feudalismo" element={<Feudalismo />} />
           <Route path="/BrasilRepublica" element={<BrasilRepublica />} />
           <Route path="/Revolucoes" element={<Revolucoes />} />
+
+      <Route path='/Geografia' element={<Geografia user={user}/>} />
+          <Route path="/Biomas" element={<Biomas user={user}/>} />
+          <Route path="/Demografia" element={<Demografia user={user}/>} />
+          <Route path="/Economia" element={<Economia user={user}/>} />
+          <Route path="/Geologia" element={<Geologia user={user}/>} />
 
       {/* <Route path='/Ingles' element={<Ingles user={user}/>} />
       <Route path='/Matematica' element={<Matematica user={user}/>} />

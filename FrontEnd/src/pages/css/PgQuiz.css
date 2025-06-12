@@ -101,23 +101,14 @@ body, html, #root {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.botoes-categorias{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: #c1dcfa;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  margin: 20px;
-  margin-top:40px;
+.botoes-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 1rem;                              /* Espaçamento entre os botões */
+  padding: 1rem;
+  margin: 40px auto;
+  max-width: 900px;                      /* Limita largura para manter 3 colunas visíveis */
 }
-
 
 .categoria-btn {
   background-color: #007BFF;
@@ -129,14 +120,15 @@ body, html, #root {
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  margin: 10px;
-  
+  width: 100%; /* Garante que o botão preencha a célula do grid */
+  transition: transform 0.2s;
 }
 
 .categoria-btn:hover {
   background-color: #0056b3;
-  transform: scale(1.20);
+  transform: scale(1.05);
 }
+
 
 
 @media screen and (max-width: 768px) {
