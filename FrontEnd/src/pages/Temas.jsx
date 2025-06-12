@@ -1,6 +1,14 @@
 import React from 'react';
-import './Red.css';
+import './css/Red.css'
+import logo from '../assets/logo2.png';
 import { useNavigate } from 'react-router-dom';
+
+import alfabet from '../assets/alfabet.jpg';
+import fakenews from '../assets/fakenews.jpg';
+import democracia from '../assets/democracia.jpg';
+import adocao from '../assets/adocao.jpg';
+import privado from '../assets/privado.jpg';
+import aposta from '../assets/aposta.jpg';
 
 const Temas = () => {
   const navigate = useNavigate();
@@ -9,37 +17,37 @@ const Temas = () => {
       id: 1,
       titulo: 'A importância da alfabetização na infância no Brasil',
       banca: 'ENEM',
-      imagem: '/tema1.png',
+      imagem: alfabet
     },
     {
       id: 2,
-      titulo: 'Os desafios da mobilidade urbana nas grandes cidades',
+      titulo: 'Os desafios de se combater as Fake News na Era da Informação',
       banca: 'ENEM',
-      imagem: '/tema2.png',
+      imagem: fakenews,
     },
     {
       id: 3,
-      titulo: 'A influência das redes sociais na formação dos jovens',
-      banca: 'ENEM',
-      imagem: '/tema3.png',
+      titulo: 'Privatizações são benéficas para o Brasil?',
+      banca: 'VUNESP',
+      imagem: privado,
     },
     {
       id: 4,
-      titulo: 'Caminhos para combater a violência contra a mulher no Brasil',
-      banca: 'ENEM',
-      imagem: '/tema4.png',
+      titulo: 'Os desafios atuais para a democracia no Brasil e no mundo',
+      banca: 'FUVEST',
+      imagem: democracia,
     },
     {
       id: 5,
-      titulo: 'O papel da ciência no enfrentamento de pandemias',
-      banca: 'ENEM',
-      imagem: '/tema5.png',
+      titulo: 'Adoção: prática de amor incondicional ou seletivo?',
+      banca: 'VUNESP',
+      imagem: adocao,
     },
     {
       id: 6,
-      titulo: 'A preservação ambiental como desafio contemporâneo',
-      banca: 'ENEM',
-      imagem: '/tema6.png',
+      titulo: 'Apostas online: Regulamentação para o consumidor e indução ao vício',
+      banca: 'FUVEST',
+      imagem: aposta,
     },
   ];
 
@@ -47,12 +55,17 @@ const Temas = () => {
     navigate(`/textosapoio/${id}`);
   };
 
+  const voltar = () => {
+    navigate('/PagInicial');
+  };
+  
+
   return (
     <div className="pagina">
       <header className="topo">
-        <img src="/logo.png" alt="Logo" className="logo" />
+      <img src={logo} alt="Logo" className="logo" />
         <h1>Redação</h1>
-        <button className="botao-sair">Sair</button>
+        <button className="botao-sair" onClick={voltar}>Voltar</button>
       </header>
 
       <h2 className="titulo">Temas - Redação</h2>

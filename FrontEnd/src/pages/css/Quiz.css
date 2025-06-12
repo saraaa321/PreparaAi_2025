@@ -4,7 +4,7 @@ html {
     padding: 0;
     height: 100%;
     font-family: "Roboto", Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #fff;
 }
 
 .quiz-container {
@@ -85,7 +85,7 @@ html {
     max-width: 950px;
 }
 
-.quiz-opcao {
+.quiz-respostas {
     padding: 20px;
     background-color: #003049;
     color: white;
@@ -97,16 +97,16 @@ html {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.quiz-opcao:hover {
+.quiz-respostas:hover {
     background-color: #002235;
     transform: scale(1.05);
 }
 
-.quiz-opcao.correta {
+.quiz-respostas.respostaCorreta {
     background-color: #38b000;
 }
 
-.quiz-opcao.errada {
+.quiz-respostas.errada  {
     background-color: #e63946;
 }
 
@@ -130,7 +130,7 @@ html {
     cursor: pointer;
     font-size: 1.2em;
     font-weight: bold;
-    margin-top:90px
+    margin-top:40px
 }
 
 .quiz-proxima:hover {
@@ -191,3 +191,31 @@ html {
     background-color: #d62828;
   }
   
+
+  @media screen and (max-width: 768px) {
+    .quiz-opcoes {
+      grid-template-columns: 1fr;
+    }
+
+    .menu{
+        margin: 1px;
+    }
+
+    #imagemLogo {
+    margin-left: -10px;
+    height: 40px;
+    width: auto;
+}
+
+.sair-btn {
+   
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: -2%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+    
+  }

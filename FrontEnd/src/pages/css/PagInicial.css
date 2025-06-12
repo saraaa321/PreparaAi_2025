@@ -22,6 +22,7 @@
     justify-content: space-between; 
     position: fixed; 
     top: 0;
+    margin-bottom: -60px;
     z-index: 2;
     width: 100%;
     height: 80px; 
@@ -106,8 +107,8 @@
   }
   
   .card {
-    width: 380px;
-    height: 240px;
+    width: 333px;
+    height: 210px;
     border-radius: 5px;
     color: white;
     font-size: 1.8em;
@@ -127,6 +128,9 @@
   .yellow {
     background-color: #fbc94c;
   }
+  .blue {
+    background-color: #4c92fb;
+  }
   
   .green {
     background-color: #a7d847;
@@ -144,3 +148,111 @@
     align-self: center;
   }
   
+
+  .ofensiva-bar {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.ofensiva-point {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/flame.png'); /* ajuste o caminho se precisar */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  
+}
+
+@media (max-width: 768px) {
+
+  .top-bar {
+    flex-direction: column;
+    align-items: center; /* ← Corrige centralização */
+    height: auto; 
+    padding: 10px 20px; 
+  }
+
+  .logo {
+    height: 50px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .saudacao {
+    order: -1; 
+    font-size: 14px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center; /* ← Corrige alinhamento do texto */
+  }
+
+  .top-buttons {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center; /* ← Centraliza botões */
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  .welcome-section {
+    padding: 20px; 
+    margin-top: 160px; /* ← Compensa altura do cabeçalho fixo */
+    border-radius: 10px;
+  }
+
+  .welcome-banner {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .student-img {
+    margin: 10px;
+    height: 220px;
+    width: auto;
+  }
+
+  .welcome-text h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .welcome-text .sub {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: -30px auto;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .ofensiva-bar {
+    justify-content: center;
+  }
+
+  .ofensiva-point {
+    width: 15px;
+    height: 15px;
+  }
+}

@@ -1,144 +1,156 @@
-/* Geral */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: white;
-    color: #0B1E3D;
-  }
-  
-  /* Container principal */
-  .SobreNos {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* Topo */
-  .top-bar {
-    background-color: #0B1E3D;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  .top-buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .btn {
-    background-color: white;
-    color: #0B1E3D;
-    border: none;
-    padding: 10px 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #dcdcdc;
-  }
-  
-  .btn.sair {
-    background-color: #007BFF;
-    color: white;
-  }
-  
-  .btn.sair:hover {
-    background-color: #005FCC;
-  }
-  
-  /* Conteúdo principal */
-  .main-content {
-    padding: 50px 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .h1 {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 20px;
-  }
-  
-  .p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 50px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 40px;
-  }
-  
-  /* Cards dos desenvolvedores */
-  .devs-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .devs-container2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .devs {
-    background-color: #003554;
-    border-radius: 12px;
-    max-width: 300px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .devs-img {
-    width: 100%;
-    border-radius: 8px;
-  }
+/* Corpo da página */
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #0B1E3D;
+  overflow-y: auto;
+}
 
-  .devs-imgA {
-    width: 110%;
-    border-radius: 8px;
-  }
-  
-  .tit {
-    font-weight: bold;
-    margin-top: 15px;
-    font-size: 16px;
-    color: #ffffff;
-  }
-  
-  .desc {
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: justify;
-    color: #ffffff;
-  }
+/* Container principal */
+.SobreNos {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  margin-top: 4%;
+}
 
-  .devsIMG {
-    width: 70%;
-    align-items: center;
-  }
+/* Topo fixo */
+.top-bar {
+  background-color: #0B1E3D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-  .sobrenos {
-    width: 50%;
-    align-items: center;
-  }
-  
+.logo {
+  height: 50px;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background-color: white;
+  color: #0B1E3D;
+  border: none;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.btn.sair {
+  background-color: #1e40af;
+  color: white;
+}
+
+.btn.sair:hover {
+  background-color: #1d4ed8;
+}
+
+/* Conteúdo principal */
+.main-contente {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sobrenos {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+.p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título dos devs */
+.devsIMG {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Containers de cards */
+.devs-container,
+.devs-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card individual */
+.devs {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 280px; /* Permite quebrar para colunas menores */
+  max-width: 320px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.devs:hover {
+  transform: translateY(-5px);
+}
+
+.devs-img,
+.devs-imgA {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.tit {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  text-align: justify;
+  color: #333;
+}
+
+

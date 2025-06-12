@@ -105,12 +105,18 @@ const Cadastro = ({ setUser }) => {
 
             // Criar documento do usuário no Firestore
             const userRef = doc(db, "usuarios", user.uid);
+            const hojeStr = new Date().toISOString().split("T")[0];
+
             await setDoc(userRef, {
-                nome: nome,   // Garantir que o nome do usuário seja salvo corretamente
+                nome: nome,
                 email: email,
-                pontuacao: 0, // Pontuação inicial
-                ranking: 0    // Campo extra para rankeamento (se necessário)
+                pontuacao: 0,
+                ranking: 0,
+                ofensiva: 1,
+                semana: 0,
+                ultimaAbertura: hojeStr,
             });
+
 
             setUser(user);
             alert("Usuário cadastrado com sucesso!");
@@ -129,13 +135,13 @@ const Cadastro = ({ setUser }) => {
             <h1>Cadastrar</h1>
             <form onSubmit={handleCadastro}>
                 <label>Nome:</label>
-                <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
-                <label>Email:</label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input placeholder='Digite seu nome' type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+                <label >Email:</label>
+                <input placeholder='Digite seu email' type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <label>Senha:</label>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input placeholder='Digite sua senha' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <label>Confirmar Senha:</label>
-                <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                <input placeholder='Confirme sua senha' type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 <button type="submit" className="login-button">Cadastrar</button>
             </form>
         </div>

@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0%;
+}
+.apoio-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+ 
+}
+
+/* Cabeçalho ocupando a tela toda */
+.apoio-header {
+  width: 100%;
+  background-color: #003d66;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0%;
+}
+.apoio-logo {
+  height: 50px;
+}
+.apoio-subtitulo {
+   font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+.apoio-voltar {
+  background-color: #2c82f9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.apoio-voltar:hover {
+  background-color: #1a5bbf;
+}
+
+.apoio-conteudo {
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: grid;
+  grid-template-columns:  1fr;
+  margin-bottom: 10%;
+}
+.apoio-titulo {
+  font-size: 2.0rem;
+  color: black;
+  margin-bottom: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+.apoio-textos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.apoio-texto {
+  flex: 1 1 45%;
+  background-color: #f2f9ff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.apoio-imagem {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  flex: 1 1 30%;
+  background-color: #f2f9ff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+/* Responsivo */
+@media (max-width: 768px) {
+  .apoio-textos-lado-a-lado {
+    flex-direction: column;
+  }
+  .apoio-texto {
+    flex: 1 1 100%;
+  }
+}
+
+.apoio-proposta{
+  margin-bottom: 5%;
+}

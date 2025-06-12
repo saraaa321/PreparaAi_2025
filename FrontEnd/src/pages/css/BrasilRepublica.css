@@ -1,0 +1,211 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+.brasil-republica-container {
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  background: linear-gradient(to bottom, #fdfdfd, #f1f1f1);
+   min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+}
+ 
+.top-barb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d7a;
+  padding: 10px 20px;
+  color: white;
+   position: sticky;
+            top: 0;
+            z-index: 100;
+}
+ 
+.logob {
+  height: 50px;
+}
+ 
+.top-buttonsb .btn {
+  background: #007bb5;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 14px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+ 
+.top-buttonsb .btn:hover {
+  background: #005f8e;
+}
+ 
+.contentb {
+  padding: 20px;
+  max-width: 1000px; /* Limite a largura do conteúdo para melhor leitura */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  width: 100%;
+            flex: 1; /* Permite que o conteúdo ocupe o espaço disponível */
+            display: flex;
+            flex-direction: column;
+}
+ 
+.top-section-buttonsb {
+  display: flex;
+  justify-content: space-between; /* Coloca os itens nas extremidades */
+  align-items: center;
+  margin-bottom: 30px; /* Espaço entre os botões e o título */
+  padding: 0 10px; /* Adiciona um pequeno padding nas laterais */
+  width: 100%;
+}
+ 
+.btnb.back-btn {
+  margin-top: 0;
+  margin-left: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 700;
+  width: 190px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color var(--transition-medium);
+  margin-left: 0;
+  /* align-self: flex-start;  */
+  left: 20px;
+  top: 100px;
+}
+ 
+.btnb.back-btn:hover {
+  background: #0d47a1;
+  transform: translateY(-2px);
+}
+ 
+/* Estilo para o botão "Marcar como Concluído" */
+.btn-concluir {
+  background: #388e3c; /* Verde */
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Aumenta o padding */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+ 
+.btn-concluir:hover {
+  background: #2e7d32; /* Verde mais escuro no hover */
+  transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
+ 
+ 
+.titulo-animado {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideInDown 1s ease;
+  color: #1a237e;
+}
+.back-button {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  display: flex; 
+  align-items: center;
+  gap: 8px; 
+  transition: background-color 0.3s ease;
+}
+.top-content-actions {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 100px; 
+  margin-bottom: 30px; 
+  width: 100%;
+}
+ 
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+.paragrafo.decorado.animado {
+  background: #fdf6e3;
+  margin: 20px auto;
+  padding: 20px;
+  border-left: 6px solid #283593;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 900px;
+  overflow: hidden;
+}
+ 
+.paragrafo.decorado.animado:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+ 
+.paragrafo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #1565c0;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+}
+ 
+.paragrafo .summary {
+  font-size: 1.1rem;
+  color: #444;
+  transition: opacity 0.3s ease;
+}
+ 
+.paragrafo .details {
+  margin-top: 15px;
+  animation: fadeIn 0.4s ease;
+}
+ 
+.paragrafo.expandido {
+  background-color: #e3f2fd;
+  transform: scale(1.02);
+}
+ 
+.paragrafo img {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+ 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footerb{
+  background-color: #004d7a;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

@@ -100,3 +100,54 @@ body, html, #root {
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
+.botoes-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 1rem;                              /* Espaçamento entre os botões */
+  padding: 1rem;
+  margin: 40px auto;
+  max-width: 900px;                      /* Limita largura para manter 3 colunas visíveis */
+}
+
+.categoria-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 32px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 100%; /* Garante que o botão preencha a célula do grid */
+  transition: transform 0.2s;
+}
+
+.categoria-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .botoes-categorias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; 
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+  .categoria-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 20px ;
+  font-size: 16px;
+  margin: 9px;  
+
+}
+  
+}

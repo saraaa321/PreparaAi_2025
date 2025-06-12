@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+  --primary-color: #003049;
+  --secondary-color: #1e90ff;
+  --accent-color: #f8af3c;
+  --success-color: #4caf50;
+  --warning-color: #dc3545;
+  --background-color: white;
+  --text-color: #333;
+  --light-text: #666;
+  --border-color: #e0e0e0;
+  --card-background: #fff;
+  --highlight-color: #fffbe6;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --border-radius-sm: 4px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, .revolucoes-wrapper {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.top-bar {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  box-shadow: var(--shadow-sm);
+}
+
+.logo {
+  height: 120px;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color var(--transition-medium);
+}
+
+.btn:hover {
+  background-color: #1681e1;
+}
+
+.btn.sair {
+  background-color: var(--warning-color);
+}
+
+.btn.sair:hover {
+  background-color: #c82333;
+}
+
+.back-button {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 700;
+  width: 190px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color var(--transition-medium);
+}
+
+.back-button:hover {
+  background-color: #1681e1;
+}
+
+.contentg {
+  margin-top: 120px;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titulo-principal {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo-animado {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideInDown 1s ease;
+  color: #1a237e;
+}
+
+.subtitulo-principal {
+  font-size: 18px;
+  color: var(--light-text);
+  margin-top: 8px;
+}
+
+.progress-bar-overall {
+  background-color: var(--border-color);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  height: 25px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  position: relative;
+}
+
+.progress-fill-overall {
+  background-color: var(--success-color);
+  height: 100%;
+  transition: width 0.8s ease-in-out;
+  border-radius: 10px;
+}
+
+.progress-percent-overall {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+  z-index: 1;
+}
+
+.revolucoes-nav {
+  background-color: var(--card-background);
+  padding: 15px;
+  margin-bottom: 25px;
+  margin-top: 50px;
+  border: 2px solid var(--accent-color);
+}
+
+.nav-titulo {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  background-color: white;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+  border-color: var(--secondary-color);
+}
+
+.nav-button.active {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+}
+
+.nav-button.completed {
+  border-color: var(--success-color);
+}
+
+.check-icon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--success-color);
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.revolucao-box {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 25px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-medium);
+}
+
+.revolucao-box.active {
+  border-color: var(--secondary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.revolucao-box.completed {
+  border-left: 5px solid var(--success-color);
+}
+
+.revolucao-header {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  transition: background-color var(--transition-fast);
+}
+
+.revolucao-header:hover {
+  background-color: #edf2f7;
+}
+
+.revolucao-box.active .revolucao-header {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.revolucao-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+
+.revolucao-media {
+  padding: 20px;
+  position: relative;
+}
+
+.revolucao-img {
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.completed-badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: var(--success-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: var(--border-radius-md);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.revolucao-info {
+  padding: 20px 20px 20px 0;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--light-text);
+  transition: all var(--transition-fast);
+  font-family: 'Poppins', sans-serif;
+}
+
+.tab-button:hover {
+  color: var(--primary-color);
+}
+
+.tab-button.active {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.revolucao-descricao {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.revolucao-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.revolucao-lista li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: var(--border-radius-md);
+  transition: background var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+}
+
+.revolucao-lista li:before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
+}
+
+.revolucao-lista li:hover {
+  background-color: #f8f9fa;
+}
+
+.revolucao-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-concluir,
+.btn-remover-concluido {
+  padding: 10px 40px;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition-medium);
+}
+
+.btn-concluir {
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+}
+
+.btn-concluir:hover {
+  background-color: #388e3c;
+}
+
+.btn-concluir.concluido {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-remover-concluido {
+  background-color: var(--warning-color);
+  color: white;
+  border: none;
+}
+
+.btn-remover-concluido:hover {
+  background-color: #c82333;
+}
