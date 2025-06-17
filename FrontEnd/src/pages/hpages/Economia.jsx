@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "../Geografia.jsx";
 
-import "../Css/Economia.css";
+import "../css/Economia.css";
 
 function GeografiaEconomica() {
   const navigate = useNavigate();

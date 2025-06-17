@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import "../Css/ReinoPlantae.css";
+import "../css/ReinoPlantae.css";
 
 const producaoData = [
   {

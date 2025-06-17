@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
-import "../Css/BrasilRepublica.css"; // Seus estilos originais serão usados aqui
+import "../css/BrasilRepublica.css"; // Seus estilos originais serão usados aqui
 import { useNavigate } from "react-router-dom"; // Importar useNavigate para o botão voltar
  
 function BrasilRepublica() {

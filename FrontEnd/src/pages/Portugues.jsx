@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import portuguesLogo from "../assets/portugues.png";
 import mainImg from "../assets/book_3601167.png";
 import logo from "../assets/logo.png";
-import "./Css/Biologia.css";
+import "./css/Biologia.css";
 
 export default function Home() {
   const [progress, setProgress] = useState(0);

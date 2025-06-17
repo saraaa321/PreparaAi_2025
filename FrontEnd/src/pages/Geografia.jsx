@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import GeografiaLogo from "../assets/geografia.png";
 import mainImg from "../assets/img.png";
 import logo from "../assets/logo.png";
-import "./Css/Geografia.css";
+import "./css/Geografia.css";
 
 export default function Home() {
   const [progress, setProgress] = useState(0);

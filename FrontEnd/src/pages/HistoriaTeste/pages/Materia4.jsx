@@ -1,5 +1,5 @@
 import React from "react";
-import "./Css/Revolucoes.css";
+import "./css/Revolucoes.css";
 
 function Revolucoes() {
   return (

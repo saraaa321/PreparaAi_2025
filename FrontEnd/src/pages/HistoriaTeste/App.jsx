@@ -5,7 +5,7 @@ import Guerras from "./pages/Materia1";
 import Feudalismo from "./pages/Materia2";
 import BrasilRepublica from "./pages/Materia3";
 import Revolucoes from "./pages/Materia4";
-import "./Css/App.css";
+import "./css/App.css";
 
 function App() {
   return (

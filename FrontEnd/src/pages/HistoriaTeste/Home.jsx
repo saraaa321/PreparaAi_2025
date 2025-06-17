@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Css/Home.css";
+import "./css/Home.css";
 import historiaLogo from "./assets/historia.png";
 
 function Home() {

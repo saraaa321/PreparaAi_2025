@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import "../Css/Anatomia.css";
+import "../css/Anatomia.css";
 import "../Biologia.jsx";
 
 const anatomiaData = [

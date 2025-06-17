@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import "../Css/Revolucoes.css";
+import "../css/Revolucoes.css";
 import "../Historia.jsx";
  
 const revolucoesData = [
