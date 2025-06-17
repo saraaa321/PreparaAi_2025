@@ -35,7 +35,9 @@ const Quiz = () => {
   const { categoria } = useParams();
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/perguntas")
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api";
+    
+    axios.get(`${API_BASE_URL}/perguntas`)
       .then((response) => {
         let perguntasFiltradas = response.data;
         if (categoria) {

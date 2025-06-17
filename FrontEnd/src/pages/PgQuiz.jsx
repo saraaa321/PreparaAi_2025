@@ -31,8 +31,10 @@ function PgQuiz() {
   };
 
   useEffect(() => {
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api";
+
     setLoading(true); // começa carregando
-    axios.get('http://localhost:3000/api/perguntas')
+    axios.get(`${API_BASE_URL}/perguntas`)
       .then((res) => {
         const todasCategorias = res.data.map(p => p.categoria);
         const unicas = [...new Set(todasCategorias)];
