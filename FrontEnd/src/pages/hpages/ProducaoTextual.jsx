@@ -212,7 +212,7 @@ function ProducaoTextual() {
   };
 
   const handleSobreNos = () => {
-    alert("Página 'Sobre Nós' em construção.");
+    navegate ("/SobreNos");
   };
 
   const handleLogout = () => {

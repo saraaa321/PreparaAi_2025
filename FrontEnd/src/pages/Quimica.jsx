@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// 1. A imagem do logo da matéria foi trocada.
-// Você precisará de uma imagem para "Inglês" no seu diretório de assets.
-import InglesLogo from "../assets/ingles.png"; // <<-- TROQUE "ingles.png" PELO NOME DA SUA IMAGEM
-import mainImg from "../assets/img.png";
+import QuimicaLogo from "../assets/unnamed.png";
+import mainImg from "../assets/quim.png";
 import logo from "../assets/logo.png";
-import "./css/Biologia.css";
+import "./css/Quimica.css";
 
 export default function Home() {
   const [progress, setProgress] = useState(0);
-  // 2. O valor inicial do "último visitado" foi atualizado para uma rota válida de inglês.
-  const [lastVisited, setLastVisited] = useState("/simple-past");
+  const [lastVisited, setLastVisited] = useState("/Atomo");
   const navigate = useNavigate();
 
   useEffect(() => {
-    // A lógica de carregar o progresso e a última página foi mantida.
     const savedProgress = localStorage.getItem("progresso");
     const savedLastVisited = localStorage.getItem("ultimaPagina");
     if (savedProgress) setProgress(Number(savedProgress));
@@ -34,7 +30,7 @@ export default function Home() {
   };
 
   const handleLogout = () => {
-    navegate("/Resumos")
+    navigate("/Resumos");
   };
 
   const handleSaveAndNavigate = (path) => {
@@ -53,8 +49,7 @@ export default function Home() {
       </header>
 
       <div className="historia-container">
-        {/* 3. A imagem e o texto alternativo foram atualizados. */}
-        <img src={InglesLogo} alt="Inglês" className="historia-img" />
+        <img src={QuimicaLogo} alt="História" className="historia-img" />
       </div>
 
       <div className="main-content">
@@ -72,22 +67,25 @@ export default function Home() {
         </div>
 
         <div className="right-section">
-          <h2>Matérias:</h2>
-          {/* 4. Os links, rotas e textos dos botões foram todos atualizados para o conteúdo de Inglês. */}
-          <Link to="/simplePast" className="subject-button" onClick={() => handleSaveAndNavigate("/simplePast")}>
-            Inglês: Simple Past
+          <h2>MATÉRIAS:</h2>
+          <Link to="/Atomo" className="subject-button" onClick={() => handleSaveAndNavigate("/Atomo")}>
+            Estrutura dos Átomos e a Tabela Periódica
           </Link>
-          <Link to="/nounsAndPronouns" className="subject-button" onClick={() => handleSaveAndNavigate("/nounsAndPronouns")}>
-            Inglês: Substantivos e Pronomes
+          <Link to="/Estados" className="subject-button" onClick={() => handleSaveAndNavigate("/Estados")}>
+            Estados Físicos dos Elementos e Propriedades
           </Link>
-          <Link to="/adjectivesAndComparatives" className="subject-button" onClick={() => handleSaveAndNavigate("/adjectivesAndComparatives")}>
-            Inglês: Adjetivos e Comparativos
+          <Link to="/Isomeria" className="subject-button" onClick={() => handleSaveAndNavigate("/Isomeria")}>
+            Isomeria e Classificação das Substâncias
           </Link>
-          <Link to="/translationAndStructure" className="subject-button" onClick={() => handleSaveAndNavigate("/translationAndStructure")}>
-            Inglês: Tradução e Estrutura
+          <Link to="/Reacoes" className="subject-button" onClick={() => handleSaveAndNavigate("/Reacoes")}>
+            Tipos de Reações Químicas
+          </Link>
+          <Link to="/Ph" className="subject-button" onClick={() => handleSaveAndNavigate("/Ph")}>
+            pH e Catalisadores
           </Link>
         </div>
       </div>
     </div>
   );
 }
+ 

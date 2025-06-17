@@ -618,7 +618,7 @@ function BrasilRepublica() {
         <div className="top-buttons">
           <button
             className="btn"
-            onClick={() => alert("Página 'Sobre Nós' em construção.")}
+            onClick={() => navegate ("/SobreNos}
           >
             Sobre Nós
           </button>

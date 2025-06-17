@@ -50,7 +50,7 @@ function GenerosTextuais() {
       <header className="top-bar">
         <img src={logo} alt="Gabarita Mente" className="logo" />
         <div className="top-buttons">
-          <button className="btn" onClick={() => alert("Página 'Sobre Nós' em construção.")}>Sobre Nós</button>
+          <button className="btn" onClick={() => navegate ("/SobreNos}>Sobre Nós</button>
           <button className="btn sair" onClick={() => alert("Você saiu com sucesso.")}>Sair</button>
         </div>
       </header>

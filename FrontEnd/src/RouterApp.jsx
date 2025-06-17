@@ -46,6 +46,13 @@ import NounsAndPronouns from './pages/hpages/NounsAndPronouns';
 import AdjectivesAndComparatives from './pages/hpages/AdjectivesAndComparatives';
 import TranslationAndStructure from './pages/hpages/TranslationAndStructure';
 
+import Quimica from './pages/Quimica';
+import Atomo from './pages/hpages/Atomo';
+import Estados from './pages/hpages/Estados';
+import Isomeria from './pages/hpages/Isomeria';
+import Ph from './pages/hpages/Ph';
+import Reacoes from './pages/hpages/Reacoes';
+
 
 // import Ingles from './pages/Ingles';
 // import Matematica from './pages/Matematica';
@@ -106,6 +113,12 @@ const RouterApp = () => {
           <Route path="/adjectivesAndComparatives" element={<AdjectivesAndComparatives user={user}/>} />
           <Route path="/translationAndStructure" element={<TranslationAndStructure user={user}/>} />
 
+      <Route path='/Quimica' element={<Quimica user={user}/>} />
+            <Route path="/Atomo" element={<Atomo user={user}/>} />
+            <Route path="/Estados" element={<Estados user={user}/>} />
+            <Route path="/Isomeria" element={<Isomeria user={user}/>} />
+            <Route path="/Ph" element={<Ph user={user}/>} />
+            <Route path="/Reacoes" element={<Reacoes user={user}/>} />
 
       {/* <Route path='/Ingles' element={<Ingles user={user}/>} />
       <Route path='/Matematica' element={<Matematica user={user}/>} />

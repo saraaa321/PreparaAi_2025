@@ -26,7 +26,7 @@ export default function Home() {
   };
 
   const handleSobreNos = () => {
-    alert("Página 'Sobre Nós' em construção.");
+    navegate ("/SobreNos");
   };
 
   const handleLogout = () => {

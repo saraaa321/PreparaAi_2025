@@ -1,144 +1,57 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png"; 
-import "../css/ReinoPlantae.css"; 
-import "../Biologia.jsx"; 
+import "../css/Reacoes.css"; 
+import "../Quimica.jsx"; 
 
 const plantaeData = [
-  {
-    id: "caracteristicas-gerais-plantae",
-    titulo: "🌳 Características Gerais do Reino Plantae",
-    imagem: "https://static.mundoeducacao.uol.com.br/mundoeducacao/2020/11/estrutura-vegetal.jpg", 
-    aba1Titulo: "Definição e Célula",
-    aba1Conteudo:
-      "O Reino Plantae, também conhecido como Reino Vegetal, agrupa organismos eucariontes, pluricelulares e autótrofos fotossintetizantes. Suas células possuem parede celular composta primariamente por celulose, vacúolos bem desenvolvidos e plastos, como os cloroplastos (responsáveis pela fotossíntese). As plantas armazenam energia na forma de amido e são fundamentais para a maioria dos ecossistemas terrestres.",
-    aba2Titulo: "Organização e Tecidos",
-    aba2Conteudo: [
-      "Corpo geralmente organizado em raiz, caule e folhas (em plantas mais complexas).",
-      "Presença de tecidos verdadeiros, como meristemas (crescimento), parênquimas (preenchimento, reserva, fotossíntese), tecidos de sustentação (colênquima e esclerênquima) e tecidos de condução (xilema e floema).",
-      "Cutícula cerosa recobrindo partes aéreas para evitar a perda excessiva de água.",
-      "Estômatos presentes nas folhas para trocas gasosas e controle da transpiração.",
-    ],
-    aba3Titulo: "Ciclo de Vida e Importância",
-    aba3Conteudo: [
-      "Apresentam ciclo de vida com alternância de gerações (haplodiplobionte), com uma fase gametofítica (n, produz gametas) e uma fase esporofítica (2n, produz esporos).",
-      "São a base da maioria das cadeias alimentares terrestres (produtores).",
-      "Produzem oxigênio (O₂) essencial para a respiração da maioria dos seres vivos.",
-      "Participam ativamente dos ciclos biogeoquímicos (água, carbono).",
-    ],
-  },
-  {
-    id: "briofitas",
-    titulo: "🌱 Briófitas (Musgos, Hepáticas)",
-    imagem: "https://cdn.bncamazonas.com.br/wp-content/uploads/2024/08/Musgo_natureza-scaled-e1724186614457.jpg", 
-    aba1Titulo: "Características Principais",
-    aba1Conteudo:
-      "As briófitas são plantas de pequeno porte, avasculares (sem vasos condutores de seiva), que habitam preferencialmente locais úmidos e sombreados. Incluem os musgos, hepáticas e antóceros. A ausência de vasos condutores limita seu tamanho e as torna dependentes da água para o transporte de substâncias e para a reprodução.",
-    aba2Titulo: "Estrutura e Reprodução",
-    aba2Conteudo: [
-      "Corpo simples, geralmente com estruturas chamadas rizoides (fixação), cauloides (sustentação) e filoides (fotossíntese).",
-      "A fase dominante do ciclo de vida é o gametófito (n), a planta verde que vemos.",
-      "O esporófito (2n) é dependente do gametófito para nutrição.",
-      "A reprodução sexuada depende da água para que os gametas masculinos (anterozoides) nadem até o gameta feminino (oosfera).",
-      "Produzem esporos para dispersão.",
-    ],
-    aba3Titulo: "Importância e Exemplos",
-    aba3Conteudo: [
-      "São plantas pioneiras, capazes de colonizar ambientes rochosos e iniciar a formação do solo.",
-      "Atuam como indicadores de umidade e qualidade do ar.",
-      "Retêm água no solo, ajudando a prevenir a erosão.",
-      "Exemplos comuns: musgos (Polytrichum, Sphagnum), hepáticas (Marchantia).",
-    ],
-  },
-  {
-    id: "pteridofitas",
-    titulo: "🌿 Pteridófitas (Samambaias, Avencas)",
-    imagem: "https://sto-blog.s3.amazonaws.com/images/2018/08/16/maidenhair-fern-2222805_960_720.jpg", 
-    aba1Titulo: "Características Principais",
-    aba1Conteudo:
-      "As pteridófitas foram as primeiras plantas a desenvolverem vasos condutores (xilema e floema), sendo consideradas as primeiras plantas vasculares (traqueófitas). Este grupo inclui samambaias, avencas, licopódios e cavalinhas. Apesar de serem vasculares, ainda não possuem sementes, flores ou frutos, e dependem da água para a reprodução.",
-    aba2Titulo: "Estrutura e Reprodução",
-    aba2Conteudo: [
-      "Possuem raiz, caule (geralmente subterrâneo, do tipo rizoma) e folhas bem desenvolvidas (frondes), frequentemente com báculos (folhas jovens enroladas).",
-      "A fase dominante do ciclo de vida é o esporófito (2n), a planta que usualmente vemos.",
-      "O gametófito (protalo) é pequeno, independente e de vida curta.",
-      "Os esporos são produzidos em estruturas chamadas esporângios, agrupados em soros na face inferior das folhas.",
-      "A reprodução sexuada também depende da água para o deslocamento dos gametas masculinos.",
-    ],
-    aba3Titulo: "Importância e Exemplos",
-    aba3Conteudo: [
-      "Amplamente utilizadas como plantas ornamentais.",
-      "Algumas espécies são comestíveis ou usadas na medicina popular.",
-      "Pteridófitas ancestrais formaram grandes florestas que deram origem a depósitos de carvão mineral.",
-      "Exemplos: samambaia-açu (Dicksonia sellowiana), avenca (Adiantum), cavalinha (Equisetum).",
-    ],
-  },
-  {
-    id: "gimnospermas",
-    titulo: "🌲 Gimnospermas (Pinheiros, Araucárias)",
-    imagem: "https://media.istockphoto.com/id/1203536779/pt/foto/silhouette-of-a-pine-araucaria-at-sunset.jpg?s=612x612&w=0&k=20&c=Lc26lxqIA5pifibC3fadP-CHtIucwsYJreY3bReb8lk=",
-    aba1Titulo: "Características Principais",
-    aba1Conteudo:
-      "As gimnospermas são plantas vasculares que produzem sementes, mas estas são 'nuas', ou seja, não são protegidas por frutos. O nome 'gimnosperma' significa 'semente nua'. Este grupo é bem adaptado a climas temperados e frios, e inclui pinheiros, araucárias, ciprestes, sequoias e cicas. A principal novidade evolutiva é a semente, que protege o embrião e facilita a dispersão.",
-    aba2Titulo: "Estrutura e Reprodução",
-    aba2Conteudo: [
-      "Geralmente são árvores de grande porte ou arbustos.",
-      "Possuem raiz, caule lenhoso e folhas geralmente aciculares (em forma de agulha) ou escamiformes, muitas vezes perenes.",
-      "Estruturas reprodutivas chamadas estróbilos ou cones (pinhas). Há cones masculinos (menores, produzem grãos de pólen) e femininos (maiores, contêm os óvulos).",
-      "A polinização ocorre principalmente pelo vento (anemofilia).",
-      "Não necessitam de água para a fecundação, pois o grão de pólen leva o gameta masculino até o óvulo.",
-    ],
-    aba3Titulo: "Importância e Exemplos",
-    aba3Conteudo: [
-      "Fornecem madeira para construção civil, fabricação de móveis e produção de celulose (papel).",
-      "Produção de resinas, terebintina e outros produtos químicos.",
-      "Muitas são usadas como plantas ornamentais (ex: pinheiros de Natal).",
-      "Sementes como o pinhão (da Araucaria angustifolia) são comestíveis.",
-      "Exemplos: Pinheiro-do-paraná (Araucaria angustifolia), pinheiros (Pinus sp.), ciprestes (Cupressus sp.), sequoias (Sequoiadendron giganteum).",
-    ],
-  },
-  {
-    id: "angiospermas",
-    titulo: "🌸 Angiospermas (Plantas com Flores e Frutos)",
-    imagem: "https://thumbs.dreamstime.com/b/girassol-97215694.jpg", 
-    aba1Titulo: "Características Principais",
-    aba1Conteudo:
-      "As angiospermas são o grupo de plantas mais diversificado e dominante no planeta atualmente. São plantas vasculares que apresentam como principais novidades evolutivas as flores e os frutos. A flor é o órgão reprodutivo, e o fruto protege a semente e auxilia na sua dispersão. O nome 'angiosperma' significa 'semente na urna' (referindo-se à semente dentro do fruto).",
-    aba2Titulo: "Estrutura da Flor, Polinização e Fruto",
-    aba2Conteudo: [
-      "A flor típica possui sépalas (cálice), pétalas (corola), estames (parte masculina, produz pólen) e carpelo/pistilo (parte feminina, contém o ovário com óvulos).",
-      "A polinização (transferência do pólen) pode ser realizada por diversos agentes, como vento, água, insetos, aves e morcegos.",
-      "Ocorrem dupla fecundação: um gameta masculino fecunda a oosfera (formando o zigoto -> embrião) e outro fecunda os núcleos polares (formando o endosperma, tecido nutritivo).",
-      "Após a fecundação, o ovário desenvolve-se no fruto e os óvulos nas sementes.",
-    ],
-    aba3Titulo: "Classificação e Importância",
-    aba3Conteudo: [
-      "Dividem-se tradicionalmente em dois grandes grupos: Monocotiledôneas (ex: gramíneas, palmeiras, lírios) e Eudicotiledôneas (ex: feijão, roseira, ipê).",
-      "São a principal fonte de alimento para humanos e muitos animais (grãos, frutas, verduras, legumes).",
-      "Fornecem matéria-prima para diversas indústrias (madeira, fibras, óleos, medicamentos).",
-      "Possuem grande importância ecológica, ornamental e cultural.",
-      "Exemplos: Roseira, laranjeira, milho, feijoeiro, orquídea, capim.",
-    ],
-  },
-  {
-    id: "fisiologia-vegetal",
-    titulo: "☀️ Fisiologia Vegetal Essencial",
-    imagem: "https://i.pinimg.com/564x/9f/5d/f8/9f5df81a4c4784a5b6d9017f49fdfec5.jpg", 
-    aba1Titulo: "Fotossíntese",
-    aba1Conteudo:
-      "É o processo pelo qual as plantas (e outros organismos clorofilados) convertem energia luminosa em energia química, armazenada na forma de compostos orgânicos (glicose). Utiliza dióxido de carbono (CO₂) e água (H₂O) na presença de luz e clorofila, liberando oxigênio (O₂) como subproduto. Equação geral: 6CO₂ + 6H₂O + Luz → C₆H₁₂O₆ + 6O₂. Ocorre nos cloroplastos.",
-    aba2Titulo: "Respiração e Transpiração",
-    aba2Conteudo: [
-      "Respiração Celular: As plantas respiram continuamente, dia e noite. Nesse processo, a glicose produzida na fotossíntese é quebrada para liberar energia (ATP) para as atividades metabólicas. Consome oxigênio e libera dióxido de carbono. Ocorre nas mitocôndrias.",
-      "Transpiração: É a perda de água na forma de vapor pelas plantas, principalmente através dos estômatos nas folhas. É crucial para o transporte de água e nutrientes das raízes para as folhas e para o resfriamento da planta.",
-    ],
-    aba3Titulo: "Hormônios e Nutrição",
-    aba3Conteudo: [
-      "Hormônios Vegetais (Fitormônios): Substâncias que regulam o crescimento e desenvolvimento das plantas, como auxinas (crescimento de caule e raiz), giberelinas (germinação, floração), citocininas (divisão celular), etileno (amadurecimento de frutos) e ácido abscísico (dormência, fechamento estomático).",
-      "Nutrição Mineral: As plantas absorvem água e nutrientes minerais do solo através das raízes, essenciais para seu metabolismo e crescimento (ex: Nitrogênio, Fósforo, Potássio).",
-    ],
-  },
-];
+        {
+          id: "ph",
+          titulo: "🌡️ O que é pH?",
+          imagem: "https://media.istockphoto.com/id/997087002/pt/vetorial/the-science-ph-scale.jpg?s=612x612&w=0&k=20&c=ghn4HEJCHD7rLa8yc_rmY7er0rLa8Z4RqqqG076imFo=",
+          aba1Titulo: "Definição e Escala",
+          aba1Conteudo:
+            "O pH é uma escala que mede a concentração de íons hidrogênio (H⁺) em uma solução, indicando se ela é ácida, neutra ou básica. É uma medida essencial para entender reações químicas, biológicas e processos ambientais.",
+          aba2Titulo: "Escala de pH",
+          aba2Conteudo: [
+            "A escala de pH varia de 0 a 14:",
+            "- **pH < 7**: Solução ácida (ex: suco de limão, vinagre).",
+            "- **pH = 7**: Solução neutra (ex: água pura).",
+            "- **pH > 7**: Solução básica ou alcalina (ex: soda cáustica, amônia).",
+            "Quanto menor o pH, maior a acidez da solução. Quanto maior o pH, mais básica ela é.",
+          ],
+          aba3Titulo: "Importância do pH",
+          aba3Conteudo: [
+            "O pH é crucial em diversas áreas, como:",
+            "- **Biologia**: O pH do sangue humano deve ser mantido entre 7,35 e 7,45 para garantir o funcionamento adequado do organismo.",
+            "- **Química**: Determina a reatividade de substâncias em soluções.",
+            "- **Meio Ambiente**: O pH da água influencia a vida aquática e a qualidade da água potável.",
+            "- **Indústria**: É usado no controle de qualidade de alimentos, cosméticos e medicamentos.",
+          ],
+        },
+        {
+          id: "catalisadores",
+          titulo: "⚗️ Catalisadores",
+          imagem: "https://www.biologianet.com/upload/conteudo/images/2014/12/reacao-com-catalisador.jpg",
+          aba1Titulo: "O que são Catalisadores?",
+          aba1Conteudo:
+            "Catalisadores são substâncias que aumentam a velocidade das reações químicas sem serem consumidos no processo. Eles funcionam diminuindo a energia de ativação necessária para a reação ocorrer.",
+          aba2Titulo: "Exemplos de Catalisadores",
+          aba2Conteudo: [
+            "- **Enzimas**: Catalisadores biológicos que aceleram reações metabólicas em organismos vivos. Exemplo: a amilase, que ajuda na digestão de carboidratos.",
+            "- **Catalisadores Industriais**: Substâncias usadas em processos químicos para aumentar a eficiência e reduzir custos. Exemplo: catalisadores usados na produção de amônia pelo processo Haber-Bosch.",
+            "- **Catalisadores Automotivos**: Presentes nos conversores catalíticos dos carros, ajudam a reduzir a emissão de gases poluentes.",
+          ],
+          aba3Titulo: "Importância dos Catalisadores",
+          aba3Conteudo: [
+            "Os catalisadores são fundamentais em diversas áreas, como:",
+            "- **Indústria Química**: Tornam reações mais rápidas e econômicas, reduzindo o consumo de energia.",
+            "- **Biologia**: Enzimas catalisam reações essenciais para a vida, como a respiração celular.",
+            "- **Meio Ambiente**: Catalisadores ajudam a reduzir a poluição, como nos conversores catalíticos de veículos.",
+            "- **Medicina**: Enzimas artificiais são usadas em tratamentos médicos e diagnósticos.",
+          ],
+        },
+      ];
 
 function Revolucoes() {
   const navigate = useNavigate();
@@ -259,7 +172,7 @@ function Revolucoes() {
   };
 
   const voltar = () => {
-    navigate('/Biologia');
+    navigate('/');
   };
 
   return (
