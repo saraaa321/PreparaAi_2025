@@ -100,7 +100,7 @@ app.delete("/api/respostas/:id", async (req, res) => {
   }
 });
 
-api.get("/", (req,res) => {
+app.get("/", (req,res) => {
     res.status(200).send("API do quiz GabaritaMente funcionando com sucesso!")
 });
 
